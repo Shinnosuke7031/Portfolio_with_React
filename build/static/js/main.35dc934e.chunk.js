@@ -1,2 +1,0 @@
-(this.webpackJsonpreact_test=this.webpackJsonpreact_test||[]).push([[0],{3:function(t,e,n){t.exports=n(4)},4:function(t,e,n){"use strict";n.r(e);var c=n(0),o=n.n(c),r=n(2),s=n.n(r);n(9);s.a.render(o.a.createElement("h1",null,"Hello React!"),document.getElementById("root"))},9:function(t,e,n){}},[[3,1,2]]]);
-//# sourceMappingURL=main.35dc934e.chunk.js.map

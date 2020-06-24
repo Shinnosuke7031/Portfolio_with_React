@@ -1,0 +1,77 @@
+Arguments: 
+  C:\Program Files (x86)\Nodist\v-x64\12.17.0\node.exe C:\Program Files (x86)\Nodist\bin\node_modules\yarn\bin\yarn.js add @material-ui/core @material-ui/internal
+
+PATH: 
+  C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Nodist\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\MySQL\MySQL Server 5.7\bin\;C:\Users\Shinnosuke\AppData\Local\Microsoft\WindowsApps;C:\texlive\2019\bin\win32;C:\MinGW\bin;C:\Users\Shinnosuke\AppData\Local\atom\bin;C:\Users\Shinnosuke\AppData\Local\Microsoft\WindowsApps;C:\Users\Shinnosuke\AppData\Roaming\npm;C:\Users\Shinnosuke\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@material-ui%2finternal: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Nodist\bin\node_modules\yarn\lib\cli.js:66987:18)
+      at Request.self.callback (C:\Program Files (x86)\Nodist\bin\node_modules\yarn\lib\cli.js:140748:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (C:\Program Files (x86)\Nodist\bin\node_modules\yarn\lib\cli.js:141720:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Nodist\bin\node_modules\yarn\lib\cli.js:141642:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (_stream_readable.js:1221:12)
+      at processTicksAndRejections (internal/process/task_queues.js:84:21)
+
+npm manifest: 
+  {
+    "name": "react_test",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@material-ui/core": "^4.10.2",
+      "@testing-library/jest-dom": "^4.2.4",
+      "@testing-library/react": "^9.3.2",
+      "@testing-library/user-event": "^7.1.2",
+      "material-ui": "^0.20.2",
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "react-scripts": "3.4.1"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "gh-pages": "^3.1.0"
+    },
+    "homepage": "https://Shinnosuke7031.github.io/react-test/"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
