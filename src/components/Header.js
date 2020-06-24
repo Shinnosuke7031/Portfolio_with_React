@@ -37,7 +37,6 @@ const useStyles = makeStyles({
   },
 });
 
-
 export default function Header() {
 
   const[left, setLeft] = useState(false);
