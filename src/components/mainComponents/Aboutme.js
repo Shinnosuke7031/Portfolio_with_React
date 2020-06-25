@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
-  title: {
+  toptitle: {
     fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
     fontSize: "100px",
     padding: "50px 0",
@@ -42,7 +42,7 @@ const Aboutme=()=>{
   
   return(
     <div>
-      <h1 className={classes.title}>Profile</h1>
+      <h1 className={classes.toptitle}>Profile</h1>
         <div className={classes.box}>
           <ul style={{padding: "0 20px"}}>
             {items.map((temp)=>(
