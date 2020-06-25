@@ -58,7 +58,6 @@ export default function Header() {
     }
     setLeft(open);
   };
-
   const changeMainType = (type) => {
     setMainType(type);
   }
