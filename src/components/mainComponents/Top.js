@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     fontSize: 30,
   },
   topdivdiv: {
-    fontFamily: 'Roboto, Droid Sans, 游ゴシック, YuGothic, メイリオ, Meiryo, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN, ＭＳ Ｐゴシック, sans-serif',
+    fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
     fontWeight: 600,
     willChange: "opacity",
   },

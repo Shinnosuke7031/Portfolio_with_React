@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   title: {
-    fontFamily: 'cursive',
+    fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
     fontSize: "100px",
     padding: "50px 0",
     margin: 0,
