@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     color: purple[800],
     cursor: "pointer",
     fontSize: "25px",
-    fontFamily: 'cursive',
+    fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
     fontWeight: 700,
   },
   menuText: {
