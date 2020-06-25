@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     fontSize: 30,
   },
   topdivdiv: {
-    fontFamily: 'cursive',
+    fontFamily: 'cursive, Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif',
     fontWeight: 600,
     willChange: "opacity",
   },
@@ -105,7 +105,6 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         <div className={classes.topUnder}>
           <p style={{background: "linear-gradient(transparent 80%, #DDA0DD 20%)"}}>I'm studying Web development.</p>
         </div>
-      
     </div>
   );
 }
