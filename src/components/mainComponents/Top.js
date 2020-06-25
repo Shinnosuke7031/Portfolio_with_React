@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     fontSize: 30,
   },
   topdivdiv: {
-    fontFamily: 'cursive, Verdana, Roboto, "Droid Sans", "游ゴシック", YuGothic, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", sans-serif',
+    fontFamily: 'Roboto, Droid Sans, 游ゴシック, YuGothic, メイリオ, Meiryo, ヒラギノ角ゴ ProN W3, Hiragino Kaku Gothic ProN, ＭＳ Ｐゴシック, sans-serif',
     fontWeight: 600,
     willChange: "opacity",
   },
@@ -54,7 +54,6 @@ const useStyles = makeStyles({
     textAlign: "center",
     width: "55%"
   }
-  
 });
 
 const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
