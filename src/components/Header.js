@@ -15,7 +15,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Main from './Main';
 
-
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -43,13 +42,15 @@ const useStyles = makeStyles({
 
 export default function Header() {
 
-  const[left, setLeft] = useState(false);
+  const [left, setLeft] = useState(false);
   const [mainType, setMainType]=useState('top');
   const classes = useStyles(); //スタイルを決める
 
   const contents = [
     {text: 'Welcome', state: 'top'},
-    {text: 'Profile', state: 'profile'}
+    {text: 'About Me', state: 'profile'},
+    {text: 'Practice', state: 'portfolio'},
+    {text: 'Contact', state: 'contact'}
   ];
 
   const toggleDrawer = (open) => (event) => {

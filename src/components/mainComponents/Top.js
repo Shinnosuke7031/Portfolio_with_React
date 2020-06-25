@@ -52,7 +52,7 @@ const useStyles = makeStyles({
     margin: "70px auto",
     fontSize: 30,
     textAlign: "center",
-    width: "55%"
+    width: "40%"
   }
 });
 
@@ -87,8 +87,9 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         }}>
 
         <p className={classes.pTag} onClick={() => toggle(!state)}>Welcome</p>
-        <p className={classes.ppTag} onClick={() => toggle(!state)}>This is Nosuke's Site.</p>
+        
       </animated.div>
+      <p className={classes.ppTag}>This is Nosuke's Site.</p>
         <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           <Grid item xs={1}>
             <ArrowForwardIcon className={classes.icon}/>

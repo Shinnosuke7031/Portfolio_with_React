@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
   toptitle: {
     fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
-    fontSize: "100px",
+    fontSize: "80px",
     padding: "50px 0",
     margin: 0,
     textAlign: "center"
@@ -37,12 +36,11 @@ const Aboutme=()=>{
     {title: '出身', text: '栃木県'},
     {title: '年齢', text: '22'},
     {title: '勉強中', text: 'HTML/CSS，React.js，Node.js，MySQL'},
-    {title: '勉強予定', text: 'サーバーサイド(Ruby，PHP)，フロントエンド(Typescript，Vue.js)'},
   ];
   
   return(
     <div>
-      <h1 className={classes.toptitle}>Profile</h1>
+      <h1 className={classes.toptitle}>About Me</h1>
         <div className={classes.box}>
           <ul style={{padding: "0 20px"}}>
             {items.map((temp)=>(
