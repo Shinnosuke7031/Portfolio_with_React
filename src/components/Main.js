@@ -1,26 +1,35 @@
 import React, { useState } from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Top from './mainComponents/Top'
 import Aboutme from './mainComponents/Aboutme'
 import { makeStyles } from '@material-ui/core/styles';
-import { deepPurple } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   mainDiv: {
     margin: "0 auto",
     width: "100%",
-    height: "100%",
+    height: "600px",
     backgroundColor: "#d3d3d3",
   },
 });
 
-const Main: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
+const Main: React.FunctionComponent<Props> = ({toggleDrawer, mainType}) => {
   const classes=useStyles();
+
+  let mainContent;
+  if(mainType==="top"){
+    mainContent=(
+      <Top toggleDrawer={toggleDrawer}/>
+    );
+  }else if(mainType==="profile"){
+    mainContent=(
+      <Aboutme/>
+    );
+  }
+
 
   return (
     <div className={classes.mainDiv}>
-      <CssBaseline />
-      <Top toggleDrawer={toggleDrawer}/>
+      {mainContent}
     </div>
   );
 }

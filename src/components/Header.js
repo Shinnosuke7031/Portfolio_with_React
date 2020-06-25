@@ -12,7 +12,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Main from './Main';
 
 
@@ -22,12 +22,16 @@ const useStyles = makeStyles({
   },
   title: {
     flexGrow: 1,
-    color: purple[800]
+    color: purple[800],
+    cursor: "pointer",
+    fontSize: "25px",
+    fontFamily: 'cursive',
+    fontWeight: 700,
   },
   menuText: {
     color: purple[800],
     paddingRight: 10,
-    fontSize: 19
+    fontSize: 19,
   },
   menuButton: {
     marginLeft: -15,
@@ -40,10 +44,12 @@ const useStyles = makeStyles({
 export default function Header() {
 
   const[left, setLeft] = useState(false);
+  const [mainType, setMainType]=useState('top');
   const classes = useStyles(); //スタイルを決める
 
   const contents = [
-    {text: 'About Me', link: './Main/Aboutme#linkAboutme'}
+    {text: 'Welcome', state: 'top'},
+    {text: 'Profile', state: 'profile'}
   ];
 
   const toggleDrawer = (open) => (event) => {
@@ -51,8 +57,11 @@ export default function Header() {
       return;
     }
     setLeft(open);
-    console.log(left);
   };
+
+  const changeMainType = (type) => {
+    setMainType(type);
+  }
 
   const menuList = (
     <div
@@ -63,9 +72,9 @@ export default function Header() {
     >
       <List>
         {contents.map((temp) => (
-          <ListItem button key={temp.text}>
-            <ListItemIcon><InboxIcon /></ListItemIcon>
-            <ListItemText primary={temp.text} />
+          <ListItem button key={temp.text} onClick={()=>changeMainType(temp.state)}>
+            <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
+            <ListItemText primary={temp.text} style={{textDecoration: "underline", textDecorationColor: "#DDA0DD"}} />
           </ListItem>
         ))}
       </List>
@@ -79,18 +88,18 @@ export default function Header() {
           <Toolbar>
             <div>
               <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={toggleDrawer(true)}>
-                <span className={classes.menuText}>Menu</span><MenuIcon style={{color: purple[800]}} />
+                <MenuIcon style={{marginRight: "10px",color: purple[800]}} />
               </IconButton>
               <Drawer open={left} onClose={toggleDrawer(false)}>
                 {menuList}
               </Drawer>
             </div>
-            <Typography variant="h6" className={classes.title} align="center" color="inherit">Shin-Nosuke</Typography>
+            <Typography onClick={()=>changeMainType("top")} variant="h6" className={classes.title} align="center" color="inherit">NOSUKE</Typography>
             <a href="https://github.com/Shinnosuke7031"><i className="fa fa-github fa-2x" aria-hidden="true"></i> </a>
             <a href="https://twitter.com/web7031boushi" className={classes.twitter}><i className="fa fa-twitter fa-2x" aria-hidden="true"></i> </a>
           </Toolbar>
         </AppBar>
-        <Main toggleDrawer={toggleDrawer}/>
+        <Main toggleDrawer={toggleDrawer} mainType={mainType}/>
     </React.Fragment>
   );
 }

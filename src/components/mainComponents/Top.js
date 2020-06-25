@@ -12,14 +12,21 @@ const useStyles = makeStyles({
     textAlign: "center",
     padding: 0,
     width: "70%",
-    padding: "50px 0"
+    padding: "50px 0 20px 0",
+    fontSize: 80,
+  },
+  ppTag: {
+    margin: "0 auto",
+    textAlign: "center",
+    padding: 0,
+    width: "70%",
+    padding: "20px 0 40px 0",
+    fontSize: 30,
   },
   topdivdiv: {
-    fontFamily: "arial black",
+    fontFamily: 'cursive',
     fontWeight: 600,
-    fontSize: 100,
     willChange: "opacity",
-    height: "400px"
   },
   icon: {
     fontSize: 60,
@@ -41,6 +48,12 @@ const useStyles = makeStyles({
     color: purple[800],
     transition: "1s"
   },
+  topUnder: {
+    margin: "70px auto",
+    fontSize: 30,
+    textAlign: "center",
+    width: "55%"
+  }
   
 });
 
@@ -75,18 +88,23 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         }}>
 
         <p className={classes.pTag} onClick={() => toggle(!state)}>Welcome</p>
+        <p className={classes.ppTag} onClick={() => toggle(!state)}>This is Nosuke's Site.</p>
       </animated.div>
         <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           <Grid item xs={1}>
             <ArrowForwardIcon className={classes.icon}/>
           </Grid>
           <Grid item xs={3}>
-            <p className={clickStyle}>Click</p>
+            <p className={clickStyle}>See More</p>
           </Grid>
           <Grid item xs={1}>
             <ArrowBackIcon className={classes.icon}/>
           </Grid>
         </Grid>
+
+        <div className={classes.topUnder}>
+          <p style={{background: "linear-gradient(transparent 80%, #DDA0DD 20%)"}}>I'm studying Web development.</p>
+        </div>
       
     </div>
   );
