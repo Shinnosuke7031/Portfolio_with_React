@@ -4,6 +4,7 @@ import Aboutme from './mainComponents/Aboutme'
 import { makeStyles } from '@material-ui/core/styles';
 import Portfolio from './mainComponents/Portfolio';
 import Contact from './mainComponents/Contact';
+import MediaQuery from "react-responsive";
 
 const useStyles = makeStyles({
   mainDiv: {
@@ -12,6 +13,14 @@ const useStyles = makeStyles({
     height: "700px",
     backgroundColor: "#d3d3d3",
     minHeight: "100%",
+  },
+  mainDivMob: {
+    margin: "0 auto",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#d3d3d3",
+    minHeight: "100%",
+    paddingBottom: "10%"
   },
 });
 
@@ -39,9 +48,19 @@ const Main: React.FunctionComponent<Props> = ({toggleDrawer, mainType}) => {
 
 
   return (
-    <div className={classes.mainDiv}>
-      {mainContent}
+    <div>
+      <MediaQuery query="(min-width: 768px)">
+        <div className={classes.mainDiv}>
+          {mainContent}
+        </div>
+      </MediaQuery>
+      <MediaQuery query="(max-width: 767px)">
+        <div className={classes.mainDivMob}>
+          {mainContent}
+        </div>
+      </MediaQuery>
     </div>
+    
   );
 }
 

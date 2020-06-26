@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import nosukeMemo1 from './img/nosukeMemo1.jpg';
 import nosukeMemo2 from './img/nosukeMemo2.jpg';
+import MediaQuery from "react-responsive";
 
 const useStyles = makeStyles({
   bbody: {
@@ -44,16 +45,35 @@ const useStyles = makeStyles({
     width: "45%",
     height: "auto",
   },
+  imageMob: {
+    width: "90%",
+    height: "auto",
+    margin: "10px auto",
+  },
   imgLink: {
     display: "flex",
     justifyContent: "space-evenly",
     margin: "0 auto",
+  },
+  imgLinkMob:
+  {
+    display: "flex",
+    justifyContent: "space-evenly",
+    textAlign: "center",
+    margin: "0 auto",
+    flexDirection: "column",
   },
   pTag:  {
     fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
     marginTop: "30px",
     textAlign: "center",
     fontSize: "20px",
+  },
+  pTagMob: {
+    fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
+    marginTop: "10px",
+    textAlign: "center",
+    fontSize: "15px",
   }
 });
 
@@ -68,20 +88,28 @@ const Portfolio = () => {
   };
 
   return (
-      <div className={classes.bbody}>
-        <h1 className={classes.contentsTitle}>Practice</h1>
-        <div className={classes.blank}>
-          <h2 className={classes.memoTitle}>Memo App</h2>
-        </div>
-        <div className={classes.portBox}>
-        
+    <div className={classes.bbody}>
+      <h1 className={classes.contentsTitle}>Practice</h1>
+      <div className={classes.blank}>
+        <h2 className={classes.memoTitle}>Memo App</h2>
+      </div>
+      <div className={classes.portBox}>
+        <MediaQuery query="(min-width: 768px)">
           <a href={contents.url} target="_blank" className={classes.imgLink}>
             <img className={classes.image} src={contents.img2}/>
             <img className={classes.image} src={contents.img1}/>
           </a>
           <p className={classes.pTag}>{ contents.text }</p>
-        </div>
+        </MediaQuery>
+        <MediaQuery query="(max-width: 767px)">
+          <p className={classes.pTagMob}>{ contents.text }</p>
+          <a href={contents.url} target="_blank" className={classes.imgLinkMob}>
+            <img className={classes.imageMob} src={contents.img2}/>
+            <img className={classes.imageMob} src={contents.img1}/>
+          </a>
+        </MediaQuery>
       </div>
+    </div>
   );
 };
 
