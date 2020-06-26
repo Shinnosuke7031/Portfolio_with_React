@@ -94,14 +94,14 @@ const Portfolio = () => {
         <h2 className={classes.memoTitle}>Memo App</h2>
       </div>
       <div className={classes.portBox}>
-        <MediaQuery query="(min-width: 768px)">
+        <MediaQuery query="(min-width: 769px)">
           <a href={contents.url} target="_blank" className={classes.imgLink}>
             <img className={classes.image} src={contents.img2}/>
             <img className={classes.image} src={contents.img1}/>
           </a>
           <p className={classes.pTag}>{ contents.text }</p>
         </MediaQuery>
-        <MediaQuery query="(max-width: 767px)">
+        <MediaQuery query="(max-width: 768px)">
           <p className={classes.pTagMob}>{ contents.text }</p>
           <a href={contents.url} target="_blank" className={classes.imgLinkMob}>
             <img className={classes.imageMob} src={contents.img2}/>

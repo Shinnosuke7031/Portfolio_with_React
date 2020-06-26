@@ -49,12 +49,12 @@ const Main: React.FunctionComponent<Props> = ({toggleDrawer, mainType}) => {
 
   return (
     <div>
-      <MediaQuery query="(min-width: 768px)">
+      <MediaQuery query="(min-width: 769px)">
         <div className={classes.mainDiv}>
           {mainContent}
         </div>
       </MediaQuery>
-      <MediaQuery query="(max-width: 767px)">
+      <MediaQuery query="(max-width: 768px)">
         <div className={classes.mainDivMob}>
           {mainContent}
         </div>
