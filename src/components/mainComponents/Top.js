@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     margin: "0 auto",
     textAlign: "center",
     padding: 0,
-    width: "70%",
+    width: "60%",
     padding: "50px 0 20px 0",
     fontSize: 80,
   },
@@ -27,6 +27,8 @@ const useStyles = makeStyles({
     fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
     fontWeight: 600,
     willChange: "opacity",
+    width: "70%",
+    margin: "0 auto",
   },
   icon: {
     fontSize: 60,
@@ -52,8 +54,8 @@ const useStyles = makeStyles({
     margin: "70px auto",
     fontSize: 30,
     textAlign: "center",
-    width: "40%"
-  }
+    width: "50%"
+  },
 });
 
 const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
