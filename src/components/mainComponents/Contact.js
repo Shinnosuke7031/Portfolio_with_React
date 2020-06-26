@@ -62,6 +62,7 @@ const useStyles = makeStyles({
     display: "flex",
     justifyContent: "center",
     width: "20%",
+    
   },
   iconA: {
     textAlign: "center",
