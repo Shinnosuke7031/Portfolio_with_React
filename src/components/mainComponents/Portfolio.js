@@ -41,15 +41,6 @@ const useStyles = makeStyles({
     padding: "40px 10px",
     position: "relative",
   },
-  image: {
-    width: "45%",
-    height: "auto",
-  },
-  imageMob: {
-    width: "90%",
-    height: "auto",
-    margin: "10px auto",
-  },
   imgLink: {
     display: "flex",
     justifyContent: "space-evenly",
@@ -62,6 +53,15 @@ const useStyles = makeStyles({
     textAlign: "center",
     margin: "0 auto",
     flexDirection: "column",
+  },
+  image: {
+    width: "45%",
+    height: "auto",
+  },
+  imageMob: {
+    width: "90%",
+    height: "auto",
+    margin: "10px auto",
   },
   pTag:  {
     fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
