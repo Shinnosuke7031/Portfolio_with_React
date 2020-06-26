@@ -6,6 +6,7 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Grid from '@material-ui/core/Grid';
 import { purple } from '@material-ui/core/colors';
 import MediaQuery from "react-responsive";
+import { faUnderline } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles({
   pTag: {
@@ -44,6 +45,7 @@ const useStyles = makeStyles({
     margin: "0 auto",
   },
   menutext: {
+    textDecoration: "underline",
     margin: "0 auto",
     fontSize: 30,
     textAlign: "center",
@@ -51,6 +53,7 @@ const useStyles = makeStyles({
     transition: "1s"
   },
   menutextHovered: {
+    textDecoration: "underline",
     margin: "0 auto",
     fontSize: 40,
     textAlign: "center",
@@ -98,7 +101,7 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
   const { x } = useSpring({ from: { x: 0 }, x: state ? 1 : 0, config: { duration: 1000 } })
   return (
     <React.Fragment>
-    <MediaQuery query="(min-width: 768px)">
+    <MediaQuery query="(min-width: 769px)">
       <div className={classes.topdivdiv}>
         <animated.div
           style={{
@@ -131,7 +134,7 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         </div>
       </div>
     </MediaQuery>
-    <MediaQuery query="(max-width: 767px)">
+    <MediaQuery query="(max-width: 768px)">
     <div className={classes.topdivdivMob}>
         <animated.div
           style={{
@@ -149,9 +152,9 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         </animated.div>
       
         <p className={classes.ppTag}>This is Nosuke's Site.</p>
-        <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} >
           <Grid item xs={5}>
-            <p className={clickStyle}>See More</p>
+            <p className={classes.menutext}>See More</p>
           </Grid>
         </Grid>
         <div className={classes.topUnderMob}>
