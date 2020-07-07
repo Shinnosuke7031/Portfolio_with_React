@@ -42,9 +42,9 @@ const Aboutme=()=>{
     <div>
       <h1 className={classes.toptitle}>About Me</h1>
         <div className={classes.box}>
-          <ul style={{padding: "0 20px"}}>
+          <ul style={{padding: "0 20px"}} >
             {items.map((temp)=>(
-              <li className={classes.detail}>
+              <li className={classes.detail} key={temp.title}>
                 <p>{temp.title}  :  {temp.text}</p>
               </li>
             ))

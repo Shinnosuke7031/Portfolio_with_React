@@ -9,7 +9,7 @@ import MediaQuery from "react-responsive";
 const useStyles = makeStyles({
   bbody: {
     margin: "0 auto",
-    height: "100%",
+    minHeight: "100%",
     backgroundColor: "#d3d3d3",
   },
   contentsTitle: {
@@ -26,7 +26,7 @@ const useStyles = makeStyles({
     boxSizing: "border-box",
     width: "80%",
     padding: "40px 10px",
-    marginBottom: "30px"
+    marginTop: "30px"
   },
   imgLink: {
     display: "flex",
@@ -55,6 +55,7 @@ const useStyles = makeStyles({
     marginTop: "30px",
     textAlign: "center",
     fontSize: "20px",
+    backgroundColor: "#d3d3d3",
   },
   pTagMob: {
     fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
@@ -76,7 +77,7 @@ const useStyles = makeStyles({
   },
   ul: {
     paddingLeft: "0px",
-    backgroundColor: "#d3d3d3"
+    margin: 0,
   }
 });
 
@@ -136,7 +137,7 @@ const Portfolio = () => {
           }
         </ul>
       </MediaQuery>
-      
+      <p　className={classes.pTag} style={{paddingBottom: "20px"}}>今後も追加していく予定です</p>
     </div>
   );
 };
