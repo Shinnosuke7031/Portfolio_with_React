@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './Header';
 import { makeStyles } from '@material-ui/core/styles';
-import { purple } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   header: {

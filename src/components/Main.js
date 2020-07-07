@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Top from './mainComponents/Top'
 import Aboutme from './mainComponents/Aboutme'
 import { makeStyles } from '@material-ui/core/styles';

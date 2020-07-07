@@ -6,13 +6,11 @@ import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import Grid from '@material-ui/core/Grid';
 import { purple } from '@material-ui/core/colors';
 import MediaQuery from "react-responsive";
-import { faUnderline } from '@fortawesome/free-solid-svg-icons';
 
 const useStyles = makeStyles({
   pTag: {
     margin: "0 auto",
     textAlign: "center",
-    padding: 0,
     width: "60%",
     padding: "50px 0 20px 0",
     fontSize: 80,
@@ -27,7 +25,6 @@ const useStyles = makeStyles({
   ppTag: {
     margin: "0 auto",
     textAlign: "center",
-    padding: 0,
     width: "70%",
     padding: "20px 0 40px 0",
     fontSize: 30,

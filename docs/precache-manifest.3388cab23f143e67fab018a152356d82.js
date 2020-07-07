@@ -1,27 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "585da2bcb9a0436f1ea5e5c4b6c9d7c7",
+    "revision": "c44d7dc139d50f929578005fcb6d8be9",
     "url": "/react-test/index.html"
   },
   {
-    "revision": "a658fcb32455fcd7f7ae",
+    "revision": "22a24509480c2827ef5f",
     "url": "/react-test/static/css/2.b549c411.chunk.css"
   },
   {
-    "revision": "a658fcb32455fcd7f7ae",
-    "url": "/react-test/static/js/2.a9bec987.chunk.js"
+    "revision": "22a24509480c2827ef5f",
+    "url": "/react-test/static/js/2.8702de2a.chunk.js"
   },
   {
     "revision": "90377550dd86ed303dd30d8f487872de",
-    "url": "/react-test/static/js/2.a9bec987.chunk.js.LICENSE.txt"
+    "url": "/react-test/static/js/2.8702de2a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0e946574b1f5f58e022e",
-    "url": "/react-test/static/js/main.5bc7167d.chunk.js"
+    "revision": "a90ce2bc57e97367616c",
+    "url": "/react-test/static/js/main.fd102998.chunk.js"
   },
   {
     "revision": "14d041c37aa1e787e0b2",
     "url": "/react-test/static/js/runtime-main.08fd1e44.js"
+  },
+  {
+    "revision": "81da1d862be2131a4b839ad69814166a",
+    "url": "/react-test/static/media/chatAPP1.81da1d86.jpg"
+  },
+  {
+    "revision": "83c5e3c7964f48358108f9a32787249b",
+    "url": "/react-test/static/media/chatAPP2.83c5e3c7.jpg"
   },
   {
     "revision": "674f50d287a8c48dc19ba404d20fe713",

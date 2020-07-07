@@ -2,11 +2,15 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import nosukeMemo1 from './img/nosukeMemo1.jpg';
 import nosukeMemo2 from './img/nosukeMemo2.jpg';
+import chatAPP1 from './img/chatAPP1.jpg';
+import chatAPP2 from './img/chatAPP2.jpg';
 import MediaQuery from "react-responsive";
 
 const useStyles = makeStyles({
   bbody: {
     margin: "0 auto",
+    height: "100%",
+    backgroundColor: "#d3d3d3",
   },
   contentsTitle: {
     margin: "0 auto",
@@ -16,30 +20,13 @@ const useStyles = makeStyles({
     padding: "50px 0 10px 0",
     textAlign: "center",
   },
-  blank: {
-    margin: "0 auto",
-    position: "relative",
-    width: "175px",
-    height: "50px"
-  },
-  memoTitle: {
-    fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
-    fontSize: "30px",
-    textAlign: "center",
-    position: "absolute",
-    backgroundColor: "#d3d3d3",
-    top: "3px",
-    left: "0",
-    width: "175px",
-    zIndex: 1
-  },
   portBox: {
     margin: "0 auto",
     border: "solid 3px #000000",
     boxSizing: "border-box",
     width: "80%",
     padding: "40px 10px",
-    position: "relative",
+    marginBottom: "30px"
   },
   imgLink: {
     display: "flex",
@@ -74,6 +61,22 @@ const useStyles = makeStyles({
     marginTop: "10px",
     textAlign: "center",
     fontSize: "15px",
+  },
+  li: {
+    listStyle: "none",
+    padding: 0,
+  },
+  appTitle: {
+    margin: "0 auto",
+    marginBottom: "10px",
+    fontFamily: "Avenir,Helvetica Neue,Helvetica,Arial,Hiragino Sans,ヒラギノ角ゴシック,YuGothic,Yu Gothic,メイリオ, Meiryo,ＭＳ Ｐゴシック,MS PGothic",
+    textAlign: "center",
+    fontSize: "30px",
+    fontWeight: "bold"
+  },
+  ul: {
+    paddingLeft: "0px",
+    backgroundColor: "#d3d3d3"
   }
 });
 
@@ -81,34 +84,59 @@ const useStyles = makeStyles({
 const Portfolio = () => {
 
   const classes=useStyles();
-  const contents={
-    name: 'memoApp', url: 'http://18.219.131.219:3000/', 
-    img1: nosukeMemo1, img2: nosukeMemo2,
-    text: '初めて作ったアプリケーション (HTML/CSS, Node.js, MySQL)'
-  };
+  const contents=[
+    {
+      id: 1, name: 'Memo App', url: 'http://18.219.131.219:3000/', 
+      img1: nosukeMemo2, img2: nosukeMemo1,
+      text: '初めて作ったアプリケーション (HTML/CSS, Node.js, MySQL)'
+    },
+    {
+      id: 2, name: '掲示板 App', url: 'http://test-nodejs.eba-fwryman3.ap-northeast-1.elasticbeanstalk.com/', 
+      img1: chatAPP1, img2: chatAPP2,
+      text: 'AWS-EB, RDSを用いて作成した掲示板APP (React.js, Node.js, MySQL)'
+    }
+  ]
 
   return (
     <div className={classes.bbody}>
       <h1 className={classes.contentsTitle}>Practice</h1>
-      <div className={classes.blank}>
-        <h2 className={classes.memoTitle}>Memo App</h2>
-      </div>
-      <div className={classes.portBox}>
-        <MediaQuery query="(min-width: 769px)">
-          <a href={contents.url} target="_blank" className={classes.imgLink}>
-            <img className={classes.image} src={contents.img2}/>
-            <img className={classes.image} src={contents.img1}/>
-          </a>
-          <p className={classes.pTag}>{ contents.text }</p>
-        </MediaQuery>
-        <MediaQuery query="(max-width: 768px)">
-          <p className={classes.pTagMob}>{ contents.text }</p>
-          <a href={contents.url} target="_blank" className={classes.imgLinkMob}>
-            <img className={classes.imageMob} src={contents.img2}/>
-            <img className={classes.imageMob} src={contents.img1}/>
-          </a>
-        </MediaQuery>
-      </div>
+      
+      <MediaQuery query="(min-width: 769px)">
+        <ul className={classes.ul}>
+          {contents.map((content)=>(
+          <li key={content.id} className={classes.li}>
+            <div className={classes.portBox}>
+            <p className={classes.appTitle}>{ content.name }</p>
+              <a href={content.url} target="_blank" rel="noopener noreferrer" className={classes.imgLink}>
+                <img className={classes.image} alt={content.name} src={content.img1}/>
+                <img className={classes.image} alt={content.name} src={content.img2}/>
+              </a>
+              <p className={classes.pTag}>{ content.text }</p>
+            </div>
+          </li>
+          ))
+          }
+        </ul>
+        
+      </MediaQuery>
+      <MediaQuery query="(max-width: 768px)">
+        <ul className={classes.ul}>
+          {contents.map((content)=>(
+          <li key={content.id} className={classes.li}>
+            <div className={classes.portBox}>
+              <p className={classes.appTitle}>{ content.name }</p>
+              <p className={classes.pTagMob}>{ content.text }</p>
+              <a href={content.url} target="_blank" rel="noopener noreferrer" className={classes.imgLinkMob}>
+                <img className={classes.imageMob} alt={content.name} src={content.img1}/>
+                <img className={classes.imageMob} alt={content.name} src={content.img2}/>
+              </a>
+            </div>
+          </li>
+          ))
+          }
+        </ul>
+      </MediaQuery>
+      
     </div>
   );
 };
