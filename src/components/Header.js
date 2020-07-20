@@ -96,7 +96,7 @@ export default function Header() {
               </Drawer>
             </div>
             <Typography onClick={()=>changeMainType("top")} variant="h6" className={classes.title} align="center" color="inherit">NOSUKE</Typography>
-            <a href="https://github.com/Shinnosuke7031"><i className="fa fa-github fa-2x" aria-hidden="true"></i> </a>
+            <a href="https://github.com/Shinnosuke7031"style={{color: "#6a1b9a"}}><i className="fa fa-github fa-2x" aria-hidden="true"></i> </a>
             <a href="https://twitter.com/web7031boushi" className={classes.twitter} style={{color: "#6a1b9a"}}><i className="fa fa-twitter fa-2x" aria-hidden="true"></i> </a>
           </Toolbar>
         </AppBar>
