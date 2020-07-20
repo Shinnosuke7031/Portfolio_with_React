@@ -36,10 +36,8 @@ const useStyles = makeStyles({
     marginLeft: -15,
   },
   twitter: {
-
     marginLeft: 10,
-    color: purple[800],
-    
+    //color: purple[800],
   },
 });
 
@@ -99,7 +97,7 @@ export default function Header() {
             </div>
             <Typography onClick={()=>changeMainType("top")} variant="h6" className={classes.title} align="center" color="inherit">NOSUKE</Typography>
             <a href="https://github.com/Shinnosuke7031"><i className="fa fa-github fa-2x" aria-hidden="true"></i> </a>
-            <a href="https://twitter.com/web7031boushi" className={classes.twitter}><i className="fa fa-twitter fa-2x" aria-hidden="true"></i> </a>
+            <a href="https://twitter.com/web7031boushi" className={classes.twitter} style={{color: "#6a1b9a"}}><i className="fa fa-twitter fa-2x" aria-hidden="true"></i> </a>
           </Toolbar>
         </AppBar>
         <Main toggleDrawer={toggleDrawer} mainType={mainType}/>
