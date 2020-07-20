@@ -36,8 +36,10 @@ const useStyles = makeStyles({
     marginLeft: -15,
   },
   twitter: {
+
     marginLeft: 10,
     color: purple[800],
+    
   },
 });
 
