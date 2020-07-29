@@ -87,7 +87,7 @@ const Portfolio = () => {
   const classes=useStyles();
   const contents=[
     {
-      id: 1, name: 'Memo App', url: 'http://18.219.131.219:3000/', 
+      id: 1, name: 'Memo App (現在公開していません)', url: '#', 
       img1: nosukeMemo2, img2: nosukeMemo1,
       text: '初めて作ったアプリケーション (HTML/CSS, Node.js, MySQL)'
     },
