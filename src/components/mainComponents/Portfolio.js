@@ -4,6 +4,8 @@ import nosukeMemo1 from './img/nosukeMemo1.jpg';
 import nosukeMemo2 from './img/nosukeMemo2.jpg';
 import chatAPP1 from './img/chatAPP1.jpg';
 import chatAPP2 from './img/chatAPP2.jpg';
+import othello1 from './img/othello1.png';
+import othello2 from './img/othello2.png';
 import MediaQuery from "react-responsive";
 
 const useStyles = makeStyles({
@@ -86,14 +88,19 @@ const Portfolio = () => {
   const classes=useStyles();
   const contents=[
     {
-      id: 1, name: 'Memo App (現在公開していません)', url: '#', 
-      img1: nosukeMemo2, img2: nosukeMemo1,
-      text: '初めて作ったアプリケーション (HTML/CSS, Node.js, MySQL)'
-    },
-    {
-      id: 2, name: '掲示板 App', url: 'http://test-nodejs.eba-fwryman3.ap-northeast-1.elasticbeanstalk.com/', 
+      id: 1, name: '掲示板 App', url: 'http://test-nodejs.eba-fwryman3.ap-northeast-1.elasticbeanstalk.com/', 
       img1: chatAPP1, img2: chatAPP2,
       text: 'AWS-EB, RDSを用いて作成した掲示板APP (React.js, Node.js, MySQL)'
+    },
+    {
+      id: 2, name: 'オセロゲーム', url: 'https://shinnosuke7031.github.io/OthelloGame-ToStudy-React-TypeScript/', 
+      img1: othello1, img2: othello2,
+      text: 'Reactの公式チュートリアル(三目並べ)をTypeScript化させ、オセロに改造 (React.js, TypeScript)'
+    },
+    {
+      id: 3, name: 'Memo App (現在公開していません)', url: '#', 
+      img1: nosukeMemo2, img2: nosukeMemo1,
+      text: '初めて作ったアプリケーション (HTML/CSS, Node.js, MySQL)'
     }
   ]
 
