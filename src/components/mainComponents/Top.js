@@ -115,7 +115,7 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
           <p className={classes.pTag} onClick={() => toggle(!state)}>Welcome</p>
         </animated.div>
       
-        <p className={classes.ppTag}>This is Nosuke's Site.</p>
+        <p className={classes.ppTag}>This is Shinnosuke's Site.</p>
         <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           <Grid item xs={1}>
             <ArrowForwardIcon className={classes.icon}/>
@@ -149,7 +149,7 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         
         </animated.div>
       
-        <p className={classes.ppTag}>This is Nosuke's Site.</p>
+        <p className={classes.ppTag}>This is Shinnosuke's Site.</p>
         <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} >
           <Grid item xs={5}>
             <p className={classes.menutext}>See More</p>

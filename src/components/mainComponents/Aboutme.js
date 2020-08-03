@@ -34,8 +34,8 @@ const Aboutme=()=>{
   const items = [
     {title: '名前', text: 'Shinnosuke Iino'},
     {title: '出身', text: '栃木県'},
-    {title: '年齢', text: '22'},
-    {title: '勉強中', text: 'HTML/CSS，React.js，Node.js，MySQL'},
+    {title: '年齢', text: '23'},
+    {title: '勉強中', text: 'React.js,  TypeScript,  Next.js,  Redux'},
   ];
   
   return(
