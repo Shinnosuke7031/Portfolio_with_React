@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.js": "/react-test/static/js/main.93a82719.chunk.js",
+    "main.js.map": "/react-test/static/js/main.93a82719.chunk.js.map",
+    "runtime-main.js": "/react-test/static/js/runtime-main.08fd1e44.js",
+    "runtime-main.js.map": "/react-test/static/js/runtime-main.08fd1e44.js.map",
+    "static/css/2.b549c411.chunk.css": "/react-test/static/css/2.b549c411.chunk.css",
+    "static/js/2.51a2a91e.chunk.js": "/react-test/static/js/2.51a2a91e.chunk.js",
+    "static/js/2.51a2a91e.chunk.js.map": "/react-test/static/js/2.51a2a91e.chunk.js.map",
+    "index.html": "/react-test/index.html",
+    "precache-manifest.9850d91636d9cd03e521f231a3c5412d.js": "/react-test/precache-manifest.9850d91636d9cd03e521f231a3c5412d.js",
+    "service-worker.js": "/react-test/service-worker.js",
+    "static/css/2.b549c411.chunk.css.map": "/react-test/static/css/2.b549c411.chunk.css.map",
+    "static/js/2.51a2a91e.chunk.js.LICENSE.txt": "/react-test/static/js/2.51a2a91e.chunk.js.LICENSE.txt",
+    "static/media/chatAPP1.jpg": "/react-test/static/media/chatAPP1.81da1d86.jpg",
+    "static/media/chatAPP2.jpg": "/react-test/static/media/chatAPP2.83c5e3c7.jpg",
+    "static/media/font-awesome.min.css": "/react-test/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/nosukeMemo1.jpg": "/react-test/static/media/nosukeMemo1.f6367b18.jpg",
+    "static/media/nosukeMemo2.jpg": "/react-test/static/media/nosukeMemo2.7df08280.jpg",
+    "static/media/othello1.png": "/react-test/static/media/othello1.7dbae4e3.png",
+    "static/media/othello2.png": "/react-test/static/media/othello2.9373dbfa.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08fd1e44.js",
+    "static/css/2.b549c411.chunk.css",
+    "static/js/2.51a2a91e.chunk.js",
+    "static/js/main.93a82719.chunk.js"
+  ]
+}
