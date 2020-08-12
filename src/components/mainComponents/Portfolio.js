@@ -6,6 +6,8 @@ import chatAPP1 from './img/chatAPP1.jpg';
 import chatAPP2 from './img/chatAPP2.jpg';
 import othello1 from './img/othello1.png';
 import othello2 from './img/othello2.png';
+import weather1 from './img/weather1.png';
+import weather2 from './img/weather2.png';
 import MediaQuery from "react-responsive";
 
 const useStyles = makeStyles({
@@ -88,6 +90,11 @@ const Portfolio = () => {
   const classes=useStyles();
   const contents=[
     {
+      id: 0, name: '気象情報（現在制作中）', url: 'https://next-app-theta.vercel.app/', 
+      img1: weather1, img2: weather2,
+      text: '外部APIとNext.jsを用いた開発練習 (Next.js, TypeScript, React.js, 気象情報API: OpenWeather)'
+    },
+    {
       id: 1, name: '掲示板 App', url: 'http://test-nodejs.eba-fwryman3.ap-northeast-1.elasticbeanstalk.com/', 
       img1: chatAPP1, img2: chatAPP2,
       text: 'AWS-EB, RDSを用いて作成した掲示板APP (React.js, Node.js, MySQL)'
@@ -101,12 +108,12 @@ const Portfolio = () => {
       id: 3, name: 'Memo App (現在公開していません)', url: '#', 
       img1: nosukeMemo2, img2: nosukeMemo1,
       text: '初めて作ったアプリケーション (HTML/CSS, Node.js, MySQL)'
-    }
+    },
   ]
 
   return (
     <div className={classes.bbody}>
-      <h1 className={classes.contentsTitle}>Practice</h1>
+      <h1 className={classes.contentsTitle}>Output</h1>
       
       <MediaQuery query="(min-width: 769px)">
         <ul className={classes.ul}>

@@ -50,7 +50,7 @@ export default function Header() {
   const contents = [
     {text: 'Welcome', state: 'top'},
     {text: 'About Me', state: 'profile'},
-    {text: 'Practice', state: 'portfolio'},
+    {text: 'Output', state: 'portfolio'},
     {text: 'Contact', state: 'contact'}
   ];
 
