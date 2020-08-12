@@ -90,7 +90,7 @@ const Portfolio = () => {
   const classes=useStyles();
   const contents=[
     {
-      id: 0, name: '気象情報（現在制作中）', url: 'https://next-app-theta.vercel.app/', 
+      id: 0, name: '気象情報 App（現在制作中）', url: 'https://next-app-theta.vercel.app/', 
       img1: weather1, img2: weather2,
       text: '外部APIとNext.jsを用いた開発練習 (Next.js, TypeScript, React.js, 気象情報API: OpenWeather)'
     },
