@@ -41,7 +41,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Header() {
+ const Header: React.FC = () => {
 
   const [left, setLeft] = useState(false);
   const [mainType, setMainType]=useState('top');
@@ -54,22 +54,20 @@ export default function Header() {
     {text: 'Contact', state: 'contact'}
   ];
 
-  const toggleDrawer = (open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
+  const toggleDrawer = (open: boolean) => {
     setLeft(open);
   };
-  const changeMainType = (type) => {
+
+  const changeMainType = (type: string) => {
     setMainType(type);
-  }
+  };
 
   const menuList = (
     <div
       className={classes.list}
       role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
+      onClick={()=>toggleDrawer(false)}
+      onKeyDown={()=>toggleDrawer(false)}
     >
       <List>
         {contents.map((temp) => (
@@ -88,10 +86,10 @@ export default function Header() {
         <AppBar position="static" style={{ background: '#d1c4e9' }}>
           <Toolbar>
             <div>
-              <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={toggleDrawer(true)}>
+              <IconButton onClick={()=>toggleDrawer(true)} className={classes.menuButton} color="inherit" aria-label="Menu" >
                 <MenuIcon style={{marginRight: "10px",color: purple[800]}} />
               </IconButton>
-              <Drawer open={left} onClose={toggleDrawer(false)}>
+              <Drawer open={left} onClose={()=>toggleDrawer(false)}>
                 {menuList}
               </Drawer>
             </div>
@@ -106,3 +104,4 @@ export default function Header() {
 }
 
 
+export default Header;

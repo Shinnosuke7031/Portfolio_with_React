@@ -95,14 +95,14 @@ const Portfolio = () => {
       text: '外部APIとNext.jsを用いた開発練習 (Next.js, TypeScript, React.js, 気象情報API: OpenWeather)'
     },
     {
+      id: 2, name: 'オセロゲーム', url: 'https://shinnosuke7031.github.io/OthelloGame-ToStudy-React-TypeScript/', 
+      img1: othello1, img2: othello2,
+      text: 'Reactの公式チュートリアル(三目並べ)をTypeScript化させ、Reduxを利用してオセロに改造 (React.js, Redux, TypeScript)'
+    },
+    {
       id: 1, name: '掲示板 App', url: 'http://test-nodejs.eba-fwryman3.ap-northeast-1.elasticbeanstalk.com/', 
       img1: chatAPP1, img2: chatAPP2,
       text: 'AWS-EB, RDSを用いて作成した掲示板APP (React.js, Node.js, MySQL)'
-    },
-    {
-      id: 2, name: 'オセロゲーム', url: 'https://shinnosuke7031.github.io/OthelloGame-ToStudy-React-TypeScript/', 
-      img1: othello1, img2: othello2,
-      text: 'Reactの公式チュートリアル(三目並べ)をTypeScript化させ、オセロに改造 (React.js, TypeScript)'
     },
     {
       id: 3, name: 'Memo App (現在公開していません)', url: '#', 

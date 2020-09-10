@@ -24,6 +24,12 @@ const useStyles = makeStyles({
   },
 });
 
+type Props = {
+  //toggleDrawer: (open: boolean) => (e: React.KeyboardEvent<HTMLDivElement>) => void;
+  toggleDrawer: (open: boolean) => void;
+  mainType: string;
+}
+
 const Main: React.FunctionComponent<Props> = ({toggleDrawer, mainType}) => {
   const classes=useStyles();
 

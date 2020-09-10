@@ -79,8 +79,11 @@ const useStyles = makeStyles({
   }
 });
 
+type Props = {
+  toggleDrawer: (open: boolean) => void;
+}
 
-const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
+const Top: React.FunctionComponent<Props> = ({toggleDrawer}) => {
   const classes = useStyles();
   const [state, toggle] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
@@ -116,7 +119,7 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         </animated.div>
       
         <p className={classes.ppTag}>This is Shinnosuke's Site.</p>
-        <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        <Grid container alignItems="center" justify="center" onClick={()=>toggleDrawer(true)} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           <Grid item xs={1}>
             <ArrowForwardIcon className={classes.icon}/>
           </Grid>
@@ -150,7 +153,7 @@ const Top: React.FunctionComponent<{toggleDrawer: any}> = ({toggleDrawer}) => {
         </animated.div>
       
         <p className={classes.ppTag}>This is Shinnosuke's Site.</p>
-        <Grid container alignItems="center" justify="center" onClick={toggleDrawer(true)} >
+        <Grid container alignItems="center" justify="center" onClick={()=>toggleDrawer(true)} >
           <Grid item xs={5}>
             <p className={classes.menutext}>See More</p>
           </Grid>
