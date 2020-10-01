@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { Context } from '../../contexts/context';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -13,6 +14,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -42,23 +44,21 @@ const useStyles = makeStyles({
 
  const Header: React.FC = () => {
 
-  const [left, setLeft] = useState(false);
-  const [mainType, setMainType]=useState('top');
+  const {state, dispatch} = useContext(Context);
   const classes = useStyles(); //スタイルを決める
 
   const contents = [
-    {text: 'Welcome', state: 'top'},
-    {text: 'About Me', state: 'profile'},
-    {text: 'Output', state: 'portfolio'},
-    {text: 'Contact', state: 'contact'}
+    {text: 'Top', path: '/'},
+    {text: 'About Me', path: '/aboutme'},
+    {text: 'Output', path: '/output'},
+    {text: 'Contact', path: '/contact'}
   ];
 
   const toggleDrawer = (open: boolean) => {
-    setLeft(open);
-  };
-
-  const changeMainType = (type: string) => {
-    setMainType(type);
+    dispatch({
+      type: 'CHANGE_IS_DRAWER_OPEN',
+      bool: open
+    })
   };
 
   const menuList = (
@@ -69,11 +69,13 @@ const useStyles = makeStyles({
       onKeyDown={()=>toggleDrawer(false)}
     >
       <List>
-        {contents.map((temp) => (
-          <ListItem button key={temp.text} onClick={()=>changeMainType(temp.state)}>
-            <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
-            <ListItemText primary={temp.text} style={{textDecoration: "underline", textDecorationColor: "#DDA0DD"}} />
-          </ListItem>
+        {contents.map((temp, index) => (
+          <Link to={temp.path} style={{textDecoration: "none", color: "black"}} key={index}>
+            <ListItem button >
+              <ListItemIcon><ArrowForwardIcon /></ListItemIcon>
+              <ListItemText primary={temp.text} style={{textDecoration: "underline", textDecorationColor: "#DDA0DD"}} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
@@ -82,17 +84,21 @@ const useStyles = makeStyles({
    return (
     <React.Fragment>
       <CssBaseline />
-        <AppBar position="static" style={{ background: '#d1c4e9' }}>
+        <AppBar position="static" style={{ background: '#d1c4e9', zIndex: 100 }}>
           <Toolbar>
             <div>
               <IconButton onClick={()=>toggleDrawer(true)} className={classes.menuButton} color="inherit" aria-label="Menu" >
-                <MenuIcon style={{marginRight: "10px",color: purple[800]}} />
+                <MenuIcon style={{color: purple[800]}} />
               </IconButton>
-              <Drawer open={left} onClose={()=>toggleDrawer(false)}>
+              <Drawer open={state.isDrawerOpen} onClose={()=>toggleDrawer(false)}>
                 {menuList}
               </Drawer>
             </div>
-            <Typography onClick={()=>changeMainType("top")} variant="h6" className={classes.title} align="center" color="inherit">SHINNOSUKE</Typography>
+            
+              <Typography variant="h6" className={classes.title} align="center" color="inherit">
+                <Link to='/' style={{textDecoration: "none", color: purple[800]}}>SHINNOSUKE</Link>
+              </Typography>
+            
             <a href="https://github.com/Shinnosuke7031"style={{color: "#6a1b9a"}}><i className="fa fa-github fa-2x" aria-hidden="true"></i> </a>
             <a href="https://twitter.com/web7031boushi" className={classes.twitter} style={{color: "#6a1b9a"}}><i className="fa fa-twitter fa-2x" aria-hidden="true"></i> </a>
           </Toolbar>
