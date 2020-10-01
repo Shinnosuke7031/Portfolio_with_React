@@ -3,11 +3,18 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import MediaQuery from "react-responsive";
 import styles from './pages.module.css';
-//import { Context } from '../../contexts/context';
+import { Context } from '../../contexts/context';
 
 const Top: React.FunctionComponent<{}> = () => {
 
-  //const {state, dispatch} = useContext(Context);
+  const {dispatch} = useContext(Context);
+
+  const toggleDrawer = () => {
+    dispatch({
+      type: 'CHANGE_IS_DRAWER_OPEN',
+      bool: true
+    })
+  };
     
   return (
     <React.Fragment>
@@ -18,7 +25,7 @@ const Top: React.FunctionComponent<{}> = () => {
         
           <div className={styles.icon_seemore}>
             <ArrowForwardIcon className={`${styles.icon} ${styles.right_arrow}`}/>
-            <p className={styles.see_more}>See More</p>
+            <p className={styles.see_more} onClick={()=>toggleDrawer()}>See More</p>
             <ArrowBackIcon className={`${styles.icon} ${styles.left_arrow}`}/>
           </div>
 
@@ -34,7 +41,7 @@ const Top: React.FunctionComponent<{}> = () => {
       
         <div className={styles.icon_seemore}>
           <ArrowForwardIcon className={`${styles.icon} ${styles.right_arrow}`}/>
-          <p className={styles.see_more}>See More</p>
+          <p className={styles.see_more} onClick={()=>toggleDrawer()}>See More</p>
           <ArrowBackIcon className={`${styles.icon} ${styles.left_arrow}`}/>
         </div>
 
