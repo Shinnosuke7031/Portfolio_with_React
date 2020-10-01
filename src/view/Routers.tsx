@@ -10,9 +10,9 @@ import styles from './routers.module.css'
 const Routers: FC<{}> = () => {
   return (
     <Router>
-      <div>
+      <div className={styles.container}>
         <Header />
-        <div className={styles.container}>
+        <div className={styles.wrapper}>
           <Switch>
             <Route exact path={"/"} component={Top} />
             <Route exact path={"/aboutme"} component={Aboutme} />
