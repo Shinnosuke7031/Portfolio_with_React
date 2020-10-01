@@ -5,7 +5,7 @@ import Top from './pages/Top';
 import Aboutme from './pages/Aboutme';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-import styles from './routers.module.css'
+import styles from './routers.module.css';
 
 const Routers: FC<{}> = () => {
   return (

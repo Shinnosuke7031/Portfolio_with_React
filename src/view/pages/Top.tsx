@@ -39,11 +39,7 @@ const Top: React.FunctionComponent<{}> = () => {
 
         <p className={styles.welcom}>Welcome</p>      
       
-        <div className={styles.icon_seemore}>
-          <ArrowForwardIcon className={`${styles.icon} ${styles.right_arrow}`}/>
-          <p className={styles.see_more} onClick={()=>toggleDrawer()}>See More</p>
-          <ArrowBackIcon className={`${styles.icon} ${styles.left_arrow}`}/>
-        </div>
+        <p className={styles.see_more} style={{width: '200px'}} onClick={()=>toggleDrawer()}>See More</p>
 
         <div className={styles.topUnderMob}>
           <p style={{background: "linear-gradient(transparent 80%, #DDA0DD 20%)"}}>I'm studying Web development.</p>

@@ -1,5 +1,6 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import styles from './pages.module.css';
+import MediaQuery from "react-responsive";
 
 const Aboutme: FC<{}> = () => {
   
@@ -25,23 +26,42 @@ const Aboutme: FC<{}> = () => {
   return(
     <div>
       <h1 className={styles.title}>About Me</h1>
-
-        <ul className={styles.profiles}>
-          {items.map((temp, index) => (
-            index!==0 ?
-            <li key={index} className={styles.profiles_content} onMouseEnter={()=>handleOnMouseEnter(temp.title, temp.text)}>
-              <p>{temp.title}</p>
-            </li> : 
-            <li key={index} className={styles.profiles_content_last} onMouseEnter={()=>handleOnMouseEnter(temp.title, temp.text)}>
-              <p>{temp.title}</p>
-            </li>
-          ))
-          }
-        </ul>
-        
-        <hr></hr>
-        {detail_info}
-        <hr></hr>
+        <MediaQuery minWidth={769}>
+          <ul className={styles.profiles}>
+            {items.map((temp, index) => (
+              index!==0 ?
+              <li key={index} className={styles.profiles_content} onMouseEnter={()=>handleOnMouseEnter(temp.title, temp.text)}>
+                <p>{temp.title}</p>
+              </li> : 
+              <li key={index} className={styles.profiles_content_last} onMouseEnter={()=>handleOnMouseEnter(temp.title, temp.text)}>
+                <p>{temp.title}</p>
+              </li>
+            ))
+            }
+          </ul>
+          
+          <hr></hr>
+          {detail_info}
+          <hr></hr>
+        </MediaQuery>
+        <MediaQuery query="(max-width: 768px)">
+          <ul className={styles.profiles_2}>
+            {items.map((temp, index) => (
+              index!==0 ?
+              <li key={index} className={styles.profiles_content_2} onMouseEnter={()=>handleOnMouseEnter(temp.title, temp.text)}>
+                <p>{temp.title}</p>
+              </li> : 
+              <li key={index} className={styles.profiles_content_last_2} onMouseEnter={()=>handleOnMouseEnter(temp.title, temp.text)}>
+                <p>{temp.title}</p>
+              </li>
+            ))
+            }
+          </ul>
+          
+          <hr></hr>
+          {detail_info}
+          <hr></hr>
+        </MediaQuery>
 
     </div>    
   );
