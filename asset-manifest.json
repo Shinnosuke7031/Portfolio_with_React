@@ -1,17 +1,19 @@
 {
   "files": {
-    "main.js": "/Portfolio_with_React/static/js/main.e08c8381.chunk.js",
-    "main.js.map": "/Portfolio_with_React/static/js/main.e08c8381.chunk.js.map",
+    "main.css": "/Portfolio_with_React/static/css/main.0178ff97.chunk.css",
+    "main.js": "/Portfolio_with_React/static/js/main.a516ec8e.chunk.js",
+    "main.js.map": "/Portfolio_with_React/static/js/main.a516ec8e.chunk.js.map",
     "runtime-main.js": "/Portfolio_with_React/static/js/runtime-main.375da9c0.js",
     "runtime-main.js.map": "/Portfolio_with_React/static/js/runtime-main.375da9c0.js.map",
     "static/css/2.11b897d0.chunk.css": "/Portfolio_with_React/static/css/2.11b897d0.chunk.css",
-    "static/js/2.d6d99c26.chunk.js": "/Portfolio_with_React/static/js/2.d6d99c26.chunk.js",
-    "static/js/2.d6d99c26.chunk.js.map": "/Portfolio_with_React/static/js/2.d6d99c26.chunk.js.map",
+    "static/js/2.dfff99f1.chunk.js": "/Portfolio_with_React/static/js/2.dfff99f1.chunk.js",
+    "static/js/2.dfff99f1.chunk.js.map": "/Portfolio_with_React/static/js/2.dfff99f1.chunk.js.map",
     "index.html": "/Portfolio_with_React/index.html",
-    "precache-manifest.8ab55169583d3a06f24c6f736f148cc8.js": "/Portfolio_with_React/precache-manifest.8ab55169583d3a06f24c6f736f148cc8.js",
+    "precache-manifest.2c5ab7ff4512f9dc3bd848643da7b213.js": "/Portfolio_with_React/precache-manifest.2c5ab7ff4512f9dc3bd848643da7b213.js",
     "service-worker.js": "/Portfolio_with_React/service-worker.js",
     "static/css/2.11b897d0.chunk.css.map": "/Portfolio_with_React/static/css/2.11b897d0.chunk.css.map",
-    "static/js/2.d6d99c26.chunk.js.LICENSE.txt": "/Portfolio_with_React/static/js/2.d6d99c26.chunk.js.LICENSE.txt",
+    "static/css/main.0178ff97.chunk.css.map": "/Portfolio_with_React/static/css/main.0178ff97.chunk.css.map",
+    "static/js/2.dfff99f1.chunk.js.LICENSE.txt": "/Portfolio_with_React/static/js/2.dfff99f1.chunk.js.LICENSE.txt",
     "static/media/chatAPP1.jpg": "/Portfolio_with_React/static/media/chatAPP1.81da1d86.jpg",
     "static/media/chatAPP2.jpg": "/Portfolio_with_React/static/media/chatAPP2.83c5e3c7.jpg",
     "static/media/font-awesome.min.css": "/Portfolio_with_React/static/media/fontawesome-webfont.fee66e71.woff",
@@ -25,7 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.375da9c0.js",
     "static/css/2.11b897d0.chunk.css",
-    "static/js/2.d6d99c26.chunk.js",
-    "static/js/main.e08c8381.chunk.js"
+    "static/js/2.dfff99f1.chunk.js",
+    "static/css/main.0178ff97.chunk.css",
+    "static/js/main.a516ec8e.chunk.js"
   ]
 }
