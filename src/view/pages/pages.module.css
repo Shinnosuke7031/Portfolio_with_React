@@ -223,11 +223,27 @@
   position: absolute;
   top: 35%;
   right: -70px;
+  transform: scale(1.0, 1.0);
+  transition: 0.4s;
+}
+
+.next_icon:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 .back_icon {
   position: absolute;
   top: 35%;
   left: -70px;
+  transform: scale(1.0, 1.0);
+  transition: 0.4s;
+}
+
+.back_icon:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.4s;
+  cursor: pointer;
 }
 /*----------------- Portfolio.tsx ------------------ */
