@@ -51,7 +51,8 @@ const useStyles = makeStyles({
     {text: 'Top', path: '/'},
     {text: 'About Me', path: '/aboutme'},
     {text: 'Output', path: '/output'},
-    {text: 'Contact', path: '/contact'}
+    {text: 'Contact', path: '/contact'},
+    {text: 'About This Site', path: '/about-this-site'}
   ];
 
   const toggleDrawer = (open: boolean) => {
