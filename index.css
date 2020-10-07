@@ -9,3 +9,13 @@ body {
 div, p {
   margin: 0;
 }
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 0;
+  list-style: none;
+}
