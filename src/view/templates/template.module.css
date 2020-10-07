@@ -1,0 +1,48 @@
+/*----------------- AboutThisSite.tsx ------------------ */
+.skills {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.skill {
+  padding: 0;
+  margin: 0 10px;
+  opacity: 1;
+}
+
+.fade {
+  position: relative;
+  animation: fadeIn 1s ease 0s 1 normal; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1; transform: translate(0, 0);
+  }
+}
+
+.line {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  animation: setLine 1s ease 1s 1 normal forwards;
+}
+
+@keyframes setLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*----------------- AboutThisSite.tsx ------------------ */
