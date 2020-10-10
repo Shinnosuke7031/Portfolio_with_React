@@ -1,6 +1,4 @@
 import React, { FC } from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";//これでもFontAwesome使える
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import MediaQuery from "react-responsive";
 import styles from './pages.module.css';
 import ContactInfoes from '../templates/PC_Components/ContactInfoes';

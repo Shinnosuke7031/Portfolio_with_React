@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import MediaQuery from "react-responsive";
 import TopContents from '../templates/PC_Components/TopContents';
 import TopContentsMob from '../templates/MobileComponents/TopContentsMob';
