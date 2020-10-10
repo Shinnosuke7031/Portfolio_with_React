@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Portfolio_with_React/static/css/main.8fb1371c.chunk.css",
-    "main.js": "/Portfolio_with_React/static/js/main.bb5ab19c.chunk.js",
-    "main.js.map": "/Portfolio_with_React/static/js/main.bb5ab19c.chunk.js.map",
+    "main.css": "/Portfolio_with_React/static/css/main.4f353f79.chunk.css",
+    "main.js": "/Portfolio_with_React/static/js/main.0ffe4bf0.chunk.js",
+    "main.js.map": "/Portfolio_with_React/static/js/main.0ffe4bf0.chunk.js.map",
     "runtime-main.js": "/Portfolio_with_React/static/js/runtime-main.375da9c0.js",
     "runtime-main.js.map": "/Portfolio_with_React/static/js/runtime-main.375da9c0.js.map",
     "static/css/2.11b897d0.chunk.css": "/Portfolio_with_React/static/css/2.11b897d0.chunk.css",
-    "static/js/2.e291b794.chunk.js": "/Portfolio_with_React/static/js/2.e291b794.chunk.js",
-    "static/js/2.e291b794.chunk.js.map": "/Portfolio_with_React/static/js/2.e291b794.chunk.js.map",
+    "static/js/2.c463da19.chunk.js": "/Portfolio_with_React/static/js/2.c463da19.chunk.js",
+    "static/js/2.c463da19.chunk.js.map": "/Portfolio_with_React/static/js/2.c463da19.chunk.js.map",
     "index.html": "/Portfolio_with_React/index.html",
-    "precache-manifest.6c88bb7dde98f018d4b54ed8fcf03d62.js": "/Portfolio_with_React/precache-manifest.6c88bb7dde98f018d4b54ed8fcf03d62.js",
+    "precache-manifest.6a2be36cfc0d5d052630527547041640.js": "/Portfolio_with_React/precache-manifest.6a2be36cfc0d5d052630527547041640.js",
     "service-worker.js": "/Portfolio_with_React/service-worker.js",
     "static/css/2.11b897d0.chunk.css.map": "/Portfolio_with_React/static/css/2.11b897d0.chunk.css.map",
-    "static/css/main.8fb1371c.chunk.css.map": "/Portfolio_with_React/static/css/main.8fb1371c.chunk.css.map",
-    "static/js/2.e291b794.chunk.js.LICENSE.txt": "/Portfolio_with_React/static/js/2.e291b794.chunk.js.LICENSE.txt",
+    "static/css/main.4f353f79.chunk.css.map": "/Portfolio_with_React/static/css/main.4f353f79.chunk.css.map",
+    "static/js/2.c463da19.chunk.js.LICENSE.txt": "/Portfolio_with_React/static/js/2.c463da19.chunk.js.LICENSE.txt",
     "static/media/chatAPP1.jpg": "/Portfolio_with_React/static/media/chatAPP1.81da1d86.jpg",
     "static/media/chatAPP2.jpg": "/Portfolio_with_React/static/media/chatAPP2.83c5e3c7.jpg",
     "static/media/font-awesome.min.css": "/Portfolio_with_React/static/media/fontawesome-webfont.fee66e71.woff",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.375da9c0.js",
     "static/css/2.11b897d0.chunk.css",
-    "static/js/2.e291b794.chunk.js",
-    "static/css/main.8fb1371c.chunk.css",
-    "static/js/main.bb5ab19c.chunk.js"
+    "static/js/2.c463da19.chunk.js",
+    "static/css/main.4f353f79.chunk.css",
+    "static/js/main.0ffe4bf0.chunk.js"
   ]
 }
