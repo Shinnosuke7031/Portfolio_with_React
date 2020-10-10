@@ -1,6 +1,4 @@
 import React, { FC, useState } from 'react';
-import NavigateNextIcon from '@material-ui/icons/NavigateNext';
-import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import nosukeMemo1 from './img/nosukeMemo1.jpg';
 import nosukeMemo2 from './img/nosukeMemo2.jpg';
 import chatAPP1 from './img/chatAPP1.jpg';
@@ -10,7 +8,9 @@ import othello2 from './img/othello2.png';
 import weather1 from './img/weather1.png';
 import weather2 from './img/weather2.png';
 import MediaQuery from "react-responsive";
-import styles from './pages.module.css';
+import Output from '../templates/PC_Components/Output';
+import OutputSub from '../templates/PC_Components/OutputSub';
+import OutputMob from '../templates/MobileComponents/OutputMob';
 
 const contents=[
   {
@@ -54,44 +54,17 @@ const Portfolio: FC<{}> = () => {
 
   return (
     <div>
-      <h1 className={styles.title}>Output</h1>
       
       <MediaQuery minWidth={1050}>
-        <div className={styles.content_box}>
-          <h1>{ content.name }</h1>
-          <p>{ content.text }</p>
-          <a href={content.url} target="_blank" rel="noopener noreferrer">
-            <img alt={content.name} src={content.img1} style={{width: "350px", height: "250px", margin: '10px'}}/>
-            <img alt={content.name} src={content.img2} style={{width: "350px", height: "250px", margin: '10px'}}/>
-          </a>
-          <div className={styles.back_icon} onClick={()=>handleClickBack()}><NavigateBeforeIcon style={{fontSize: '100px'}}/></div>
-          <div className={styles.next_icon} onClick={()=>handleClickNext()}><NavigateNextIcon style={{fontSize: '100px'}}/></div>
-        </div>
-        
+        <Output content={content} onClickNext={handleClickNext} onClickBack={handleClickBack} />
       </MediaQuery>
+
       <MediaQuery maxWidth={1049} minWidth={769}>
-        <div className={styles.content_box_2}>
-          <h1>{ content.name }</h1>
-          <p>{ content.text }</p>
-          <a href={content.url} target="_blank" rel="noopener noreferrer">
-            <img alt={content.name} src={content.img1} style={{width: "400px", height: "266px", margin: '10px'}}/>
-          </a>
-          <div className={styles.back_icon} onClick={()=>handleClickBack()}><NavigateBeforeIcon style={{fontSize: '100px'}}/></div>
-          <div className={styles.next_icon} onClick={()=>handleClickNext()}><NavigateNextIcon style={{fontSize: '100px'}}/></div>
-        </div>
-        
+        <OutputSub content={content} onClickNext={handleClickNext} onClickBack={handleClickBack} />
       </MediaQuery>
+
       <MediaQuery query="(max-width: 768px)">
-        <div className={styles.content_box_3}>
-          <h1>{ content.name }</h1>
-          <p>{ content.text }</p>
-          <a href={content.url} target="_blank" rel="noopener noreferrer">
-            <img alt={content.name} src={content.img1} style={{width: "250px", height: "166px"}}/>
-          </a>
-          <div className={styles.back_icon} onClick={()=>handleClickBack()}><NavigateBeforeIcon style={{fontSize: '100px'}}/></div>
-          <div className={styles.next_icon} onClick={()=>handleClickNext()}><NavigateNextIcon style={{fontSize: '100px'}}/></div>
-        </div>
-        
+        <OutputMob content={content} onClickNext={handleClickNext} onClickBack={handleClickBack} />
       </MediaQuery>
       
     </div>

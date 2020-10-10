@@ -1,3 +1,12 @@
+.title {
+  font-size: 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+
 /*----------------- TopContents.tsx ------------------ */
 
 .topdivdiv {
@@ -156,16 +165,6 @@
   width: 500px;
 }
 
-.profiles_2 {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 250px;
-}
-
 .profiles_content {
   font-weight: bold;
   margin: 5px;
@@ -179,36 +178,11 @@
   transition: 0.5s;
 }
 
-.profiles_content_2 {
-  font-weight: bold;
-  margin: 5px;
-  width: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-}
 
 .profiles_content_last {
   font-weight: bold;
   margin: 5px;
   width: 410px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.profiles_content_last_2 {
-  font-weight: bold;
-  margin: 5px;
-  width: 210px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,3 +198,115 @@
 }
 
 /*----------------- Aboutme.tsx ------------------ */
+
+/*----------------- Portfolio.tsx ------------------ */
+
+.content_box {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+  height: 450px;
+}
+
+.content_box_2 {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+}
+
+.content_box_3 {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.next_icon {
+  position: absolute;
+  top: 35%;
+  right: -70px;
+  transform: scale(1.0, 1.0);
+  transition: 0.4s;
+}
+
+.next_icon:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.back_icon {
+  position: absolute;
+  top: 35%;
+  left: -70px;
+  transform: scale(1.0, 1.0);
+  transition: 0.4s;
+}
+
+.back_icon:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.4s;
+  cursor: pointer;
+}
+/*----------------- Portfolio.tsx ------------------ */
+
+/*----------------- AboutThisSite.tsx ------------------ */
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+}
+
+.skill {
+  padding: 0;
+  margin: 0 10px;
+  opacity: 1;
+}
+
+.fade {
+  position: relative;
+  animation: fadeIn 1s ease 0s 1 normal; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1; transform: translate(0, 0);
+  }
+}
+
+.line {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  animation: setLine 1s ease 1s 1 normal forwards;
+}
+
+@keyframes setLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*----------------- AboutThisSite.tsx ------------------ */

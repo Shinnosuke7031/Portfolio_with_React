@@ -1,3 +1,12 @@
+.title {
+  font-size: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 5px;
+}
+
 /*----------------- TopContentsMob.tsx ------------------ */
 .topUnderMob {
   margin: 70px auto;
@@ -102,3 +111,142 @@
 }
 
 /*----------------- ContactInfoesMob.tsx ------------------ */
+
+/*----------------- AboutmeInfoesMob.tsx ------------------ */
+
+.profiles {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 220px;
+}
+
+
+.profiles_content {
+  font-weight: bold;
+  margin: 5px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.profiles_content_0 {
+  font-weight: bold;
+  margin: 5px;
+  width: 210px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.profilesOnClick {
+  transition: 0.5s;
+  background-color: #c782d8;
+}
+
+/*----------------- AboutmeInfoesMob.tsx ------------------ */
+
+/*----------------- Portfolio.tsx ------------------ */
+
+.content_box {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.next_icon {
+  position: absolute;
+  top: 35%;
+  right: -70px;
+  transform: scale(1.0, 1.0);
+  transition: 0.4s;
+}
+
+.next_icon:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.back_icon {
+  position: absolute;
+  top: 35%;
+  left: -70px;
+  transform: scale(1.0, 1.0);
+  transition: 0.4s;
+}
+
+.back_icon:hover {
+  transform: scale(1.2, 1.2);
+  transition: 0.4s;
+  cursor: pointer;
+}
+/*----------------- Portfolio.tsx ------------------ */
+
+/*----------------- AboutThisSite.tsx ------------------ */
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.skill {
+  padding: 0 0 0 5px;
+  opacity: 1;
+}
+
+.fade {
+  position: relative;
+  animation: fadeIn 1s ease 0s 1 normal; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; transform: translate(0, 30px);
+  }
+  100% {
+    opacity: 1; transform: translate(0, 0);
+  }
+}
+
+.line {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #000000;
+  animation: setLine 1s ease 1s 1 normal forwards;
+}
+
+@keyframes setLine {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*----------------- AboutThisSite.tsx ------------------ */
