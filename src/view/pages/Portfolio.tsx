@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import NavigateBeforeIcon from '@material-ui/icons/NavigateBefore';
 import nosukeMemo1 from './img/nosukeMemo1.jpg';
@@ -35,7 +35,7 @@ const contents=[
   },
 ]
 
-const Portfolio = () => {
+const Portfolio: FC<{}> = () => {
 
   const [content, setContent] = useState(contents[0]);
   const NumberOfContent = contents.length;
