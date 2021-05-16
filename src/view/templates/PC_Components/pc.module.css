@@ -88,6 +88,10 @@
   width: 400px;
 }
 
+.welcome_animation {
+  font-size: 50px;
+  margin: 0 5px;
+}
 /*----------------- TopContents.tsx ------------------ */
 
 /*----------------- ContactInfoes.tsx ------------------ */

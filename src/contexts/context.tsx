@@ -2,7 +2,8 @@ import React, { createContext, useReducer, FC } from 'react';
 import { Actions, ProviderProps } from '../types/context'
 
 const initState = {
-  isDrawerOpen: false
+  isDrawerOpen: false,
+  isDisplayFirst: true,
 }
 
 export type States = typeof initState;
@@ -13,6 +14,11 @@ const reducer = (state: States, action: Actions) => {
       return {
         ...state,
         isDrawerOpen: action.bool
+      }
+    case 'CHANGE_IS_DISPLAY_FIRST':
+      return {
+        ...state,
+        isDisplayFirst: action.bool
       }
     default:
       return state;
