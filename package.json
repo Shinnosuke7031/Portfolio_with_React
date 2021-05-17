@@ -20,6 +20,7 @@
     "@types/react-dom": "^17.0.5",
     "@types/react-responsive": "^8.0.2",
     "@types/react-router-dom": "^5.1.7",
+    "@types/react-slick": "^0.23.4",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "file-loader": "^6.2.0",
@@ -43,6 +44,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-responsive": "^8.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1"
   }
 }
