@@ -252,3 +252,22 @@
   }
 }
 /*----------------- AboutThisSite.tsx ------------------ */
+
+/* slick */
+.slick {
+  width: 100%;
+  margin: 0 auto;
+}
+.slickimg {
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+}
+.slickimg img {
+  display: block;
+  margin: 0 auto;
+}
+.slickimg p {
+  width: fit-content;
+  margin: 0 auto;
+}

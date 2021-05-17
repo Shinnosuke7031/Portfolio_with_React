@@ -1,11 +1,18 @@
 import React, { FC, useState } from 'react';
-import styles from './pc.module.css';
 
 import { AboutmeProps } from '../../../types/props'
+
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from './pc.module.css';
+import '../../css/slick.css';
 
 const AboutmeInfoes: FC<AboutmeProps> = (props) => {
 
   const items = props.items;
+  const settings = props.settings;
+  const imgs = props.imgs;
 
   const [detail, setDetail] = useState({ title: items[0].title, text: items[0].text });
 
@@ -37,6 +44,18 @@ const AboutmeInfoes: FC<AboutmeProps> = (props) => {
       <hr></hr>
       {detail_info}
       <hr></hr>
+
+      <br />
+      <div>
+        <Slider {...settings} className={styles.slick}>
+          {imgs.map((img, index) =>
+            <div key={index} className={styles.slickimg}>
+              <img src={img.src} height="150px" />
+              <p>{img.title}</p>
+            </div>
+          )}
+        </Slider>
+      </div>
         
     </div>    
   );

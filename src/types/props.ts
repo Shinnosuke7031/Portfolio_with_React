@@ -9,6 +9,11 @@ export type AboutmeProps = {
     title: string;
     text: string;
   }[];
+  imgs: {
+    src: string;
+    title: string;
+  }[];
+  settings: any;
 }
 
 type PortfolioContent = {
