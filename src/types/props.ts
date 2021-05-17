@@ -2,6 +2,11 @@ import { type } from "os"
 
 export type SiteDetailProps = {
   skills: string[];
+  imgs: {
+    src: string;
+    title: string;
+  }[];
+  settings: any;
 }
 
 export type AboutmeProps = {

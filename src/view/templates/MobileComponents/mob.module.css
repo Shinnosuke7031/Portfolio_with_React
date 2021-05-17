@@ -204,13 +204,15 @@
 /*----------------- AboutThisSite.tsx ------------------ */
 
 .skills {
-  list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
   margin: 0 auto;
-  padding: 0;
+}
+
+.liststyle_none {
+  list-style: none;
 }
 
 .skill {
