@@ -1,24 +1,16 @@
 import React, { FC, useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import styles from './pc.module.css';
 import { Context } from '../../../contexts/context';
 import { useSpring, animated, config } from '@react-spring/web';
+import { contents } from '../../pages/path';
 
 const TopContents: FC<{}> = () => {
 
   const {state, dispatch} = useContext(Context);
-
-  const [flip, set] = useState(false);
-  const props_h1 = useSpring({
-    to: { opacity: 1 },
-    from: { opacity: 0 },
-    // reset: true,
-    // reverse: flip,
-    delay: 100,
-    config: config.molasses,
-    // onRest: () => set(!flip),
-  });
+  /* <React Spring> */
   const props_div = useSpring({
     to: { opacity: 0 },
     from: { opacity: 1 },
@@ -40,6 +32,17 @@ const TopContents: FC<{}> = () => {
     })
   )
 
+  const trans_x = [140, 270, 370, 480];
+  const props_t = trans_x.map(x => 
+    useSpring({
+      from: { x: 0 },
+      to: { x: x },
+      config: config.molasses,
+      delay: 5500,
+    })
+  )
+  /* </React Spring> */
+
   const toggleDrawer = () => {
     dispatch({
       type: 'CHANGE_IS_DRAWER_OPEN',
@@ -54,8 +57,8 @@ const TopContents: FC<{}> = () => {
   };
 
   setTimeout(() => {
-    toggleDisplayFirst();
-  }, 8000)
+    if(state.isDisplayFirst) toggleDisplayFirst();
+  }, 5500)
 
   return (
     <div className={styles.topdivdiv}>
@@ -114,11 +117,21 @@ const TopContents: FC<{}> = () => {
 
       <p className={styles.welcom}>Welcome</p>
       
-        <div className={styles.icon_seemore}>
+        {/* <div className={styles.icon_seemore}>
           <ArrowForwardIcon className={`${styles.icon} ${styles.right_arrow}`}/>
           <p className={styles.see_more} onClick={()=>toggleDrawer()}>See More</p>
           <ArrowBackIcon className={`${styles.icon} ${styles.left_arrow}`}/>
-        </div>
+        </div> */}
+
+      <div>
+        {contents.map((content, index) => (
+          content.path !== '/' && <div key={index} className={styles.path}>
+            <animated.div style={{backgroundColor: '#d3d3d3',...props_t[index-1]}}>
+              <Link to={content.path}>{content.text}</Link>
+            </animated.div>
+          </div>
+        ))}
+      </div>
 
       <div className={styles.topUnder}>
         <p style={{background: "linear-gradient(transparent 80%, #DDA0DD 20%)"}}>I'm studying Web development.</p>
