@@ -8,7 +8,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist/"),
   },
   resolve: {
-    extensions: ['.jsx', '.tsx','.js', '.ts']
+    extensions: [".jsx", ".tsx", ".js", ".ts"],
   },
   module: {
     rules: [
@@ -23,19 +23,18 @@ module.exports = {
           "style-loader",
           {
             loader: "css-loader",
-            options: { url: false }
-          }
-        ]
+            options: { url: false },
+          },
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
-            loader: 'file-loader',
-            options: {
-            }  
-          }
-        ]
+            loader: "file-loader",
+            options: {},
+          },
+        ],
       },
     ],
   },
@@ -45,8 +44,9 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: "./dist",
+    static: "./dist",
     hot: true,
-    port: 3000
+    port: 3000,
   },
+  devtool: "eval-source-map",
 };
