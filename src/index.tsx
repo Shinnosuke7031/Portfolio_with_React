@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
 
-import Routers from "./view/Routers";
+import Index from "./view/Index";
 import Provider from "./contexts/context";
 import "./view/css/normalize.css";
 
 render(
   <Provider>
-    <Routers />
+    <Index />
   </Provider>,
   document.getElementById("app")
 );

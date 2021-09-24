@@ -16,26 +16,32 @@ const TerminalRow: React.VFC<Props> = ({ index }) => {
 
   return (
     <Container backgroundColor="#000000" fontColor="#31b00a">
-      <p>Welcome@portfolio&nbsp;&nbsp;</p>
+      <p>[You@portfolio]$&nbsp;</p>
       <input
         type="text"
         id={`input-${index}`}
         value={value}
         onChange={handleChange}
+        disabled={false}
+        autoComplete="off"
+        spellCheck={false}
       />
     </Container>
   );
 };
 
+export default TerminalRow;
+
 /******** Styled-components *********/
 const Container = styled.div<{ backgroundColor: string; fontColor: string }>`
   width: 100%;
-  margin: 5px 0 0 0;
+  margin: 2px 0;
   height: fit-content;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   font-size: 12px;
+  font-family: "Courier", sans-serif;
   p {
     margin: 0;
   }
@@ -53,5 +59,3 @@ const Container = styled.div<{ backgroundColor: string; fontColor: string }>`
     }
   }
 `;
-
-export default TerminalRow;
