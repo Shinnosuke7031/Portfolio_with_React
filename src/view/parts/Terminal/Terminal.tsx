@@ -36,12 +36,15 @@ const Terminal: React.VFC<{}> = () => {
     <Draggable
       onStop={() => setIsPinShowed(true)}
       onDrag={() => setIsPinShowed(false)}
+      defaultPosition={{ x: 30, y: 0 }}
+      bounds="parent"
     >
       <Container
         height={heightPx}
         width={widthPx}
         backgroundColor="#000000"
         fontColor="#31b00a"
+        onKeyPress={keyPress}
       >
         <IconsDiv>
           <IconDiv color="#74312a" backgroundColor="#ff5858">
@@ -69,7 +72,7 @@ const Container = styled.div<{
   fontColor: string;
 }>`
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 3px;
   height: ${(props) => props.height}px;
   width: ${(props) => props.width}px;
@@ -79,6 +82,7 @@ const Container = styled.div<{
   box-shadow: 10px 5px 5px #707070;
   aspect-ratio: 3/2;
   color: ${(props) => props.fontColor};
+  cursor: grab;
 `;
 
 const IconsDiv = styled.div`
