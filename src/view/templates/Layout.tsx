@@ -1,6 +1,8 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import styled from "styled-components";
-import CorkBoard from "../../images/CorkBoard.png";
+import Header from "./Header";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 /************ Type Props ************/
 type Props = {
@@ -9,21 +11,30 @@ type Props = {
 
 /************ Components ************/
 const Layout: React.VFC<Props> = ({ children }) => {
-  return <Container image={CorkBoard}>{children}</Container>;
+  return (
+    <Container>
+      <Header />
+      <br />
+      <MainWrapper>{children}</MainWrapper>
+    </Container>
+  );
 };
 
 export default Layout;
 
 /******** Styled-components *********/
-const Container = styled.div<{ image: string }>`
+const Container = styled.div<{}>`
   margin: 0 auto;
   position: relative;
-  background-image: url(${(props) => props.image});
-  border: 30px #905335;
-  border-style: ridge;
-  width: calc(100vw - 60px);
-  height: calc(100vh - 60px);
+  width: 100vw;
+  height: fit-content;
+`;
+
+const MainWrapper = styled.div<{}>`
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  height: fit-content;
+  margin: 0 auto;
 `;

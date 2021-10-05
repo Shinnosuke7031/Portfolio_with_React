@@ -9,6 +9,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".jsx", ".tsx", ".js", ".ts"],
+    alias: {
+      "@material-ui/styled-engine": "@material-ui/styled-engine-sc",
+    },
   },
   module: {
     rules: [
