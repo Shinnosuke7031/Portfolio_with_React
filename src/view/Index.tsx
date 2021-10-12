@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import Layout from "./templates/Layout";
 import GameController from "./parts/GameController";
@@ -7,21 +7,29 @@ import styled, { keyframes } from "styled-components";
 import AboutMe from "./contents/AboutMe/AboutMe";
 import CatGif from "../images/dot_kuroneko.gif";
 import KeibaGif from "../images/keiba.gif";
+import Runner from "../images/runner.png";
 import Products from "./contents/Products/Products";
+import Contact from "./contents/Contact/Contact";
+import InitLoading from "./parts/InitLoading";
 
 const Routers: FC<{}> = () => {
+  const [isDisplayLoading, setIsDisplayLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setIsDisplayLoading(false), 7000);
+  }, []);
   return (
     <React.Fragment>
       <Helmet>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Helmet>
       <Layout>
+        {isDisplayLoading && <InitLoading />}
         <GameControllerWrapper>
           <GameController />
         </GameControllerWrapper>
         <ContentsWrapper>
           <LoopSlide>
-            <div className="yoko">
+            <div id="aboutthissite" className="yoko">
               <p>
                 <img src={CatGif} width={30} />
               </p>
@@ -29,7 +37,7 @@ const Routers: FC<{}> = () => {
           </LoopSlide>
           <AboutThisSite />
           <LoopSlide>
-            <div className="yoko">
+            <div id="aboutme" className="yoko">
               <p>
                 <img src={KeibaGif} width={30} />
               </p>
@@ -37,13 +45,21 @@ const Routers: FC<{}> = () => {
           </LoopSlide>
           <AboutMe />
           <LoopSlide>
-            <div className="yoko">
+            <div id="products" className="yoko">
               <p>
                 <img src={KeibaGif} width={30} />
               </p>
             </div>
           </LoopSlide>
           <Products />
+          <LoopSlide>
+            <div id="contact" className="yoko">
+              <p>
+                <img src={Runner} width={30} />
+              </p>
+            </div>
+          </LoopSlide>
+          <Contact />
         </ContentsWrapper>
       </Layout>
     </React.Fragment>
@@ -54,14 +70,10 @@ export default Routers;
 
 const GameControllerWrapper = styled.div<{}>`
   width: 300px;
-  height: 100%;
-  /* background-color: #929292; */
 `;
 
 const ContentsWrapper = styled.div<{}>`
   width: 600px;
-  height: 100%;
-  /* background-color: #ff8686; */
 `;
 
 const ushiugokiyoko = keyframes`

@@ -25,7 +25,6 @@ export default Layout;
 /******** Styled-components *********/
 const Container = styled.div<{}>`
   margin: 0 auto;
-  position: relative;
   width: 100vw;
   height: fit-content;
 `;

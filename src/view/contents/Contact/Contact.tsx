@@ -6,27 +6,29 @@ import KuronekoGif from "../../../images/kuroneko_an.gif";
 /************ Type Props ************/
 
 /************ Components ************/
-const AboutThisSite: React.VFC<{}> = () => {
+const Contact: React.VFC<{}> = () => {
   return (
     <Container>
       <Paper elevation={3}>
         <Wrapper>
-          <h2>About this site</h2>
-          <p>当サイトは、Shinnosuke Iinoのポートフォリオサイトです。</p>
-          <p>
-            これまで開発した製作物や使用経験のあるスキルなどをまとめています。
-          </p>
-          <p>
-            私について少しでも知っていただければ幸いです。
-            <img src={KuronekoGif} width={20} />
-          </p>
+          <h2>Contact</h2>
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScGhPS3eQ6Ua-MKLDq5WA9Zngz3fPljuQnF93MT7PGdgFNLCQ/viewform?embedded=true"
+            width="100%"
+            height="900px"
+            frameBorder="0"
+            marginHeight={0}
+            marginWidth={0}
+          >
+            読み込んでいます…
+          </iframe>
         </Wrapper>
       </Paper>
     </Container>
   );
 };
 
-export default AboutThisSite;
+export default Contact;
 
 /******** Styled-components *********/
 const Container = styled.div<{}>`

@@ -1,8 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import LogoPNG from "../../images/logo.png";
+import { Link as Scroll } from "react-scroll";
 
-const Navs = ["About this site", "About me", "Products", "Contact"];
+const Navs = [
+  { name: "About this site", scrollId: "aboutthissite" },
+  { name: "About me", scrollId: "aboutme" },
+  { name: "Products", scrollId: "products" },
+  { name: "Contact", scrollId: "contact" },
+];
 
 /************ Type Props ************/
 
@@ -16,7 +21,9 @@ const Header: React.VFC<{}> = () => {
       </LogoWrapper>
       <NavsWrapper>
         {Navs.map((nav, index) => (
-          <p key={index}>{nav}</p>
+          <Scroll to={nav.scrollId} smooth={true} key={index}>
+            <p>{nav.name}</p>
+          </Scroll>
         ))}
       </NavsWrapper>
     </Container>

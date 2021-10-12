@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import { useKey } from "rooks";
+import * as Scroll from "react-scroll";
+let scroller = Scroll.scroller;
+
 const Navs: typeNavs[] = ["AboutThisSite", "Aboutme", "Products", "Contact"];
 type typeNavs = "AboutThisSite" | "Aboutme" | "Products" | "Contact";
-
+const scrollIds = ["aboutthissite", "aboutme", "products", "contact"];
 /************ Type Props ************/
 
 /************ Components ************/
@@ -19,6 +23,28 @@ const GameController: React.VFC<{}> = () => {
       else setNav(Navs[CurrentNavIndex + direction]);
     }
   };
+  const KeyDown = () => {
+    // const CurrentNavIndex = Navs.indexOf(Nav);
+    // if (Nav === "Contact") return;
+    // else setNav(Navs[CurrentNavIndex + 1]);
+    handleClickCrossKeys(1);
+  };
+  const KeyUp = () => {
+    // const CurrentNavIndex = Navs.indexOf(Nav);
+    // if (Nav === "AboutThisSite") return;
+    // else setNav(Navs[CurrentNavIndex - 1]);
+    handleClickCrossKeys(-1);
+  };
+
+  const KeyEnter = () => {
+    const CurrentNavIndex = Navs.indexOf(Nav);
+    const scrollId = scrollIds[CurrentNavIndex];
+    scroller.scrollTo(scrollId, { smooth: true });
+  };
+
+  useKey(["ArrowDown"], KeyDown);
+  useKey(["ArrowUp"], KeyUp);
+  useKey(["Enter"], KeyEnter);
 
   return (
     <Container>
