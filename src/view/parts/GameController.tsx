@@ -24,15 +24,9 @@ const GameController: React.VFC<{}> = () => {
     }
   };
   const KeyDown = () => {
-    // const CurrentNavIndex = Navs.indexOf(Nav);
-    // if (Nav === "Contact") return;
-    // else setNav(Navs[CurrentNavIndex + 1]);
     handleClickCrossKeys(1);
   };
   const KeyUp = () => {
-    // const CurrentNavIndex = Navs.indexOf(Nav);
-    // if (Nav === "AboutThisSite") return;
-    // else setNav(Navs[CurrentNavIndex - 1]);
     handleClickCrossKeys(-1);
   };
 
@@ -110,7 +104,12 @@ const GameController: React.VFC<{}> = () => {
             <div className="circle" />
           </div>
         </CrossKey>
-        <Circle top={250} right={10}>
+        <Circle
+          onClick={() => KeyEnter()}
+          top={250}
+          right={10}
+          isHoverOn={true}
+        >
           A
         </Circle>
         <Circle top={290} right={50}>
@@ -242,13 +241,7 @@ const CrossKey = styled.div<{}>`
   }
 `;
 
-const Triangle = styled.div<{}>`
-  border-top: 7px solid transparent;
-  border-left: ${(7 * 2) / Math.sqrt(3)}px solid #000000;
-  border-bottom: 7px solid transparent;
-  margin: 0 7px 0 10px;
-`;
-const Circle = styled.div<{ top: number; right: number }>`
+const Circle = styled.div<{ top: number; right: number; isHoverOn?: boolean }>`
   border-radius: 50%;
   margin: 0 10px 0 10px;
   position: absolute;
@@ -263,4 +256,5 @@ const Circle = styled.div<{ top: number; right: number }>`
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 2px 1px 1px #000000;
+  cursor: ${(props) => (props.isHoverOn ? "pointer" : "default")};
 `;
