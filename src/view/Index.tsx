@@ -70,15 +70,26 @@ export default Routers;
 
 const GameControllerWrapper = styled.div<{}>`
   width: 300px;
+  @media (max-width: 901px) {
+    width: 100%;
+  }
 `;
 
 const ContentsWrapper = styled.div<{}>`
   width: 600px;
+  @media (max-width: 901px) {
+    width: 100%;
+  }
 `;
 
 const ushiugokiyoko = keyframes`
   0%   {transform: translateX(0px);}
   50%  {transform: translateX(580px);}
+  100% {transform: translateX(0px);}
+`;
+const ushiugokiyokoMob = keyframes`
+  0%   {transform: translateX(0px);}
+  50%  {transform: translateX(90vw);}
   100% {transform: translateX(0px);}
 `;
 const ushiugokimuki = keyframes`
@@ -105,6 +116,9 @@ const LoopSlide = styled.div<{}>`
     height: 30px;
     top: 0;
     animation: ${ushiugokiyoko} 30s infinite;
+    @media (max-width: 901px) {
+      animation: ${ushiugokiyokoMob} 30s infinite;
+    }
     p {
       animation: ${ushiugokimuki} 30s infinite;
       width: fit-content;

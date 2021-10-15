@@ -9,13 +9,32 @@ const Row: React.VFC<{ name: string; term: string; star: number }> = (
 ) => {
   return (
     <React.Fragment>
-      <Grid textAlign="left" item xs={3}>
+      <Grid
+        textAlign="left"
+        item
+        xs={3}
+        justifyContent="center"
+        alignItems="center"
+        style={{ wordBreak: "break-word" }}
+      >
         {props.name}
       </Grid>
-      <Grid textAlign="left" item xs={3}>
+      <Grid
+        textAlign="left"
+        item
+        xs={3}
+        justifyContent="center"
+        alignItems="center"
+      >
         {props.term}
       </Grid>
-      <Grid textAlign="left" item xs={3}>
+      <Grid
+        textAlign="left"
+        item
+        xs={3}
+        justifyContent="center"
+        alignItems="center"
+      >
         <StarBorderIcon />
         {props.star >= 2 && <StarBorderIcon />}
         {props.star >= 3 && <StarBorderIcon />}
@@ -86,35 +105,89 @@ const AboutMe: React.VFC<{}> = () => {
           <Skills>
             <h3>使用経験のある技術</h3>
             <Grid container spacing={1}>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="C++" term="2019年4月~" star={4} />
               </Grid>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="React.js" term="2020年6月~" star={4} />
               </Grid>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="MySQL" term="2020年6月~" star={2} />
               </Grid>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="Next.js" term="2020年9月~" star={3} />
               </Grid>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="Node.js" term="2020年6月~" star={3} />
               </Grid>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="PHP" term="2020年12月~" star={4} />
               </Grid>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="Laravel(Lumen)" term="2021年2月~" star={2} />
               </Grid>
-              <Grid justifyContent="center" container item spacing={3}>
+              <Grid
+                justifyContent="center"
+                alignItems="center"
+                container
+                item
+                spacing={3}
+              >
                 <Row name="AWS" term="2021年5月~" star={2} />
               </Grid>
             </Grid>
             <br />
             <div className="description">
               <Grid container spacing={1}>
-                <Grid container item spacing={3} justifyContent="center">
+                <Grid
+                  container
+                  item
+                  spacing={3}
+                  justifyContent="center"
+                  alignItems="center"
+                >
                   <Grid item xs={2}>
                     <StarBorderIcon style={{ fontSize: "1rem" }} />
                   </Grid>
@@ -125,7 +198,13 @@ const AboutMe: React.VFC<{}> = () => {
                     軽く使用した程度
                   </Grid>
                 </Grid>
-                <Grid container item spacing={3} justifyContent="center">
+                <Grid
+                  container
+                  item
+                  spacing={3}
+                  justifyContent="center"
+                  alignItems="center"
+                >
                   <Grid item xs={2}>
                     <StarBorderIcon style={{ fontSize: "1rem" }} />
                     <StarBorderIcon style={{ fontSize: "1rem" }} />
@@ -137,7 +216,13 @@ const AboutMe: React.VFC<{}> = () => {
                     ドキュメントなどを見ながら扱える
                   </Grid>
                 </Grid>
-                <Grid container item spacing={3} justifyContent="center">
+                <Grid
+                  container
+                  item
+                  spacing={3}
+                  justifyContent="center"
+                  alignItems="center"
+                >
                   <Grid item xs={2}>
                     <StarBorderIcon style={{ fontSize: "1rem" }} />
                     <StarBorderIcon style={{ fontSize: "1rem" }} />
@@ -231,6 +316,9 @@ const Skills = styled.div<{}>`
   margin: 3rem auto 1rem;
   width: fit-content;
   font-family: Arial;
+  @media (max-width: 901px) {
+    width: 100%;
+  }
   .description {
     font-size: 10px;
     border: 1px dotted #000000;

@@ -58,6 +58,17 @@ const Products: React.VFC<{}> = () => {
         <ArrowBackIosIcon />
       </BackArrowWrraper>
     ),
+    responsive: [
+      {
+        breakpoint: 901,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
   };
   return (
     <Container>
@@ -250,4 +261,5 @@ const LogDiv = styled.div<{}>`
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
 `;

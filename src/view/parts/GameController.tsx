@@ -133,6 +133,9 @@ const Container = styled.div<{}>`
   background-color: #33398f;
   border-radius: 10px 10px 50px 10px;
   padding: 1.2rem 0 0 0;
+  @media (max-width: 901px) {
+    position: static;
+  }
 `;
 
 const PositionRelative = styled.div<{}>`

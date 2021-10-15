@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link as Scroll } from "react-scroll";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 
 const Navs = [
   { name: "About this site", scrollId: "aboutthissite" },
@@ -13,6 +21,35 @@ const Navs = [
 
 /************ Components ************/
 const Header: React.VFC<{}> = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDrawer = (open: boolean) => {
+    setIsOpen(open);
+  };
+
+  const menuList = (
+    <div
+      role="presentation"
+      onClick={() => toggleDrawer(false)}
+      onKeyDown={() => toggleDrawer(false)}
+      onTouchEnd={() => toggleDrawer(false)}
+    >
+      <List>
+        {Navs.map((nav, index) => (
+          <Scroll to={nav.scrollId} smooth={true} key={index}>
+            <ListItem button>
+              <ListItemIcon>
+                <ArrowForwardIcon />
+              </ListItemIcon>
+              <ListItemText>
+                <ListText>{nav.name}</ListText>
+              </ListItemText>
+            </ListItem>
+          </Scroll>
+        ))}
+      </List>
+    </div>
+  );
   return (
     <Container>
       <LogoWrapper>
@@ -26,6 +63,22 @@ const Header: React.VFC<{}> = () => {
           </Scroll>
         ))}
       </NavsWrapper>
+      <NavsWrapperMob>
+        <IconButton
+          onClick={() => toggleDrawer(true)}
+          color="inherit"
+          aria-label="Menu"
+        >
+          <MenuIcon />
+        </IconButton>
+        <Drawer
+          anchor="right"
+          open={isOpen}
+          onClose={() => toggleDrawer(false)}
+        >
+          {menuList}
+        </Drawer>
+      </NavsWrapperMob>
     </Container>
   );
 };
@@ -35,7 +88,7 @@ export default Header;
 /******** Styled-components *********/
 const Container = styled.div<{}>`
   margin: 0;
-  width: 100vw;
+  width: 100%;
   height: 3.5rem;
   background-color: rgba(0, 0, 0, 0.807);
   /* border-width: 3px 0 0 0;
@@ -66,6 +119,9 @@ const NavsWrapper = styled.div<{}>`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  @media (max-width: 901px) {
+    display: none;
+  }
   p {
     position: relative;
     font-size: 19px;
@@ -91,4 +147,18 @@ const NavsWrapper = styled.div<{}>`
       transition: 0.3s;
     }
   }
+`;
+
+const NavsWrapperMob = styled.div<{}>`
+  display: none;
+  @media (max-width: 901px) {
+    display: block;
+  }
+`;
+
+const ListText = styled.div`
+  text-decoration: underline;
+  text-decoration-color: #656565;
+  font-family: "DotGothic16", sans-serif !important;
+  font-weight: bold;
 `;

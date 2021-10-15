@@ -36,4 +36,8 @@ const MainWrapper = styled.div<{}>`
   width: 900px;
   height: fit-content;
   margin: 0 auto;
+  @media (max-width: 901px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
