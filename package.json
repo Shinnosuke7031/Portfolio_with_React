@@ -7,7 +7,7 @@
     "start": "webpack serve",
     "watch": "webpack --watch",
     "build": "webpack --mode production",
-    "deploy": "rm -rf docs && mkdir docs && cp dist/* docs"
+    "deploy": "rm -rf docs && mkdir docs && cp -r dist/* docs"
   },
   "keywords": [],
   "author": "",
