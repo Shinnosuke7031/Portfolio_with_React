@@ -33,7 +33,7 @@ const hideop = keyframes`
   0% {
     opacity: 1;
   }
-  50% {
+  80% {
     opacity: 1;
   }
   100% {
@@ -55,7 +55,7 @@ const Container = styled.div<{ isDisplay: boolean }>`
   left: 0;
   z-index: 999;
   background-color: #ffffff;
-  animation: ${hideop} 7s linear 0s;
+  animation: ${hideop} 6s linear 0s;
   animation-fill-mode: forwards;
   .rakugo {
     width: 100%;

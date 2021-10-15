@@ -152,7 +152,9 @@ const NavsWrapper = styled.div<{}>`
 const NavsWrapperMob = styled.div<{}>`
   display: none;
   @media (max-width: 901px) {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
 

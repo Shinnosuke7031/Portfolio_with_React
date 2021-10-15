@@ -8,6 +8,7 @@ import BlogImg from "../../../images/NosukeBlog.png";
 import BartenderGif from "../../../images/bartender.gif";
 import TakuhaiGif from "../../../images/takuhai_4.gif";
 import UmaImg from "../../../images/UmaEventSearch.png";
+import { useInView } from "react-intersection-observer";
 
 const products = [
   {
@@ -40,11 +41,15 @@ const products = [
 
 /************ Components ************/
 const Products: React.VFC<{}> = () => {
+  const { ref, inView } = useInView({
+    rootMargin: "-50px",
+    triggerOnce: true,
+  });
   const settings = {
     dots: true,
     infinite: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 4000,
     speed: 500,
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -72,37 +77,43 @@ const Products: React.VFC<{}> = () => {
   };
   return (
     <Container>
-      <Paper elevation={3}>
-        <Wrapper>
-          <h2>Products</h2>
-          <Slider {...settings}>
-            {products.map((product, i) => (
-              <ElementWrapper key={i}>
-                <Paper elevation={0} className="paper">
-                  <h3 className="title">{product.title}</h3>
-                  <div className="img-link">
-                    <a href={product.url} target="_blank">
-                      <img src={product.img} width={200} />
-                    </a>
-                  </div>
-                  <HukidashiDiv>
-                    <p>{product.description}▼</p>
-                  </HukidashiDiv>
-                  <img
-                    src={i % 2 === 0 ? BartenderGif : TakuhaiGif}
-                    width={20}
-                    className="gif-icon"
-                  />
-                  <LogDiv>
-                    <p>{product.skills}▼</p>
-                  </LogDiv>
-                </Paper>
-              </ElementWrapper>
-            ))}
-          </Slider>
-          {/* <img className="takuhai-gif" src={TakuhaiGif} width={50} /> */}
-        </Wrapper>
-      </Paper>
+      <div ref={ref}>
+        {inView && (
+          <div className="animate__animated animate__fadeInUp">
+            <Paper elevation={3}>
+              <Wrapper>
+                <h2>Products</h2>
+                <Slider {...settings}>
+                  {products.map((product, i) => (
+                    <ElementWrapper key={i}>
+                      <Paper elevation={0} className="paper">
+                        <h3 className="title">{product.title}</h3>
+                        <div className="img-link">
+                          <a href={product.url} target="_blank">
+                            <img src={product.img} width={200} />
+                          </a>
+                        </div>
+                        <HukidashiDiv>
+                          <p>{product.description}▼</p>
+                        </HukidashiDiv>
+                        <img
+                          src={i % 2 === 0 ? BartenderGif : TakuhaiGif}
+                          width={20}
+                          className="gif-icon"
+                        />
+                        <LogDiv>
+                          <p>{product.skills}▼</p>
+                        </LogDiv>
+                      </Paper>
+                    </ElementWrapper>
+                  ))}
+                </Slider>
+                {/* <img className="takuhai-gif" src={TakuhaiGif} width={50} /> */}
+              </Wrapper>
+            </Paper>
+          </div>
+        )}
+      </div>
     </Container>
   );
 };
@@ -115,10 +126,12 @@ const Container = styled.div<{}>`
   position: relative;
   width: 100%;
   height: 100%;
+  min-height: 100vh;
 `;
 
 const Wrapper = styled.div<{}>`
   background-color: #f1f1f1;
+  padding: 0 0 1rem 0;
   text-align: center;
   width: 100%;
   text-align: center;

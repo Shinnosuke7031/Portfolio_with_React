@@ -1,29 +1,39 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 import Paper from "@mui/material/Paper";
-import KuronekoGif from "../../../images/kuroneko_an.gif";
+import { useInView } from "react-intersection-observer";
 
 /************ Type Props ************/
 
 /************ Components ************/
 const Contact: React.VFC<{}> = () => {
+  const { ref, inView } = useInView({
+    rootMargin: "-50px",
+    triggerOnce: true,
+  });
   return (
     <Container>
-      <Paper elevation={3}>
-        <Wrapper>
-          <h2>Contact</h2>
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScGhPS3eQ6Ua-MKLDq5WA9Zngz3fPljuQnF93MT7PGdgFNLCQ/viewform?embedded=true"
-            width="100%"
-            height="900px"
-            frameBorder="0"
-            marginHeight={0}
-            marginWidth={0}
-          >
-            読み込んでいます…
-          </iframe>
-        </Wrapper>
-      </Paper>
+      <div ref={ref}>
+        {inView && (
+          <div className="animate__animated animate__fadeInUp">
+            <Paper elevation={3}>
+              <Wrapper>
+                <h2>Contact</h2>
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLScGhPS3eQ6Ua-MKLDq5WA9Zngz3fPljuQnF93MT7PGdgFNLCQ/viewform?embedded=true"
+                  width="100%"
+                  height="900px"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                >
+                  読み込んでいます…
+                </iframe>
+              </Wrapper>
+            </Paper>
+          </div>
+        )}
+      </div>
     </Container>
   );
 };
@@ -36,6 +46,7 @@ const Container = styled.div<{}>`
   position: relative;
   width: 100%;
   height: fit-content;
+  min-height: 100vh;
 `;
 
 const Wrapper = styled.div<{}>`

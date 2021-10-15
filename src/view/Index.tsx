@@ -11,9 +11,11 @@ import Runner from "../images/runner.png";
 import Products from "./contents/Products/Products";
 import Contact from "./contents/Contact/Contact";
 import InitLoading from "./parts/InitLoading";
+import "animate.css";
 
 const Routers: FC<{}> = () => {
   const [isDisplayLoading, setIsDisplayLoading] = useState(true);
+
   useEffect(() => {
     setTimeout(() => setIsDisplayLoading(false), 7000);
   }, []);
